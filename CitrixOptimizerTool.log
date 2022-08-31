@@ -1,0 +1,20 @@
+31-8-2022 10:49:35|GLOBAL|Information|1|Started source provider
+31-8-2022 10:49:35|GLOBAL|Information|1|Start Optimizer. System Info:
+Version = 3.0.0.2
+Operating system = Microsoft Windows NT 6.2.9200.0
+Processor architecture = AMD64
+31-8-2022 10:49:36|GLOBAL|Verbose|1|Checking for update ...
+31-8-2022 10:49:36|GLOBAL|Verbose|1|Current version is uptodate
+31-8-2022 10:49:36|GLOBAL|Verbose|1|Local Templates Directory: C:\temp\Maintenance script\Templates
+31-8-2022 10:49:36|GLOBAL|Information|1|The best template file path is: C:\temp\Maintenance script\Templates\Citrix_Windows_Server_2019_1809.xml
+31-8-2022 10:49:36|MainViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|XMLViewerPageViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|MarketplaceXMLViewerPageViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|GLOBAL|Information|1|The templates number need to update is 0
+31-8-2022 10:49:36|TemplateBuilderPageViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|RecentTemplatesViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|HistoryViewerPageViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|HistoryViewerPageViewModel|Verbose|1|InitEventModes
+31-8-2022 10:49:36|MainPageViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|PredefiniedTemplatesViewModel|Information|1|Started source provider
+31-8-2022 10:49:36|GLOBAL|Information|1|The best template file path is: C:\temp\Maintenance script\Templates\Citrix_Windows_Server_2019_1809.xml

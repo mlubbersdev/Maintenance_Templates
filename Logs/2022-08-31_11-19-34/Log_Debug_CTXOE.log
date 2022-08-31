@@ -1,0 +1,3176 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20220831111934
+Username: STEENTJESICT\adminmlubbers
+RunAs User: STEENTJESICT\adminmlubbers
+Configuration Name: 
+Machine: SRV-STS-RDS-000 (Microsoft Windows NT 10.0.17763.0)
+Host Application: C:\Windows\syswow64\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 12268
+PSVersion: 5.1.17763.2931
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.2931
+BuildVersion: 10.0.17763.2931
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Checking permissions
+
+Processing definition file C:\temp\Maintenance_script\Templates\Citrix_Windows_Server_2022_2009.xml
+Adding CTXOE modules
+
+
+
+schemaversion  2.0
+version        1.1
+id             Citrix_Windows_Server_2022_2009
+displayname    Windows Server 2022 version 21H2 (2009) from Citrix
+description    OS optimizations for Windows Server 2022
+category       OS Optimizations
+author         Citrix Systems Inc.
+lastupdatedate 08/26/2021
+
+
+
+        Group: Disable Services
+        Group ID: DisableServices
+            AllJoyn Router Service -
+Startup type is Disabled
+            Application Layer Gateway Service -
+Startup type is Disabled
+            Bluetooth Audio Gateway Service -
+Startup type is Disabled
+            Bluetooth Support Service -
+Startup type is Disabled
+            Diagnostic Policy Service -
+Startup type is Disabled
+            Diagnostic Service Host -
+Startup type is Disabled
+            Diagnostic System Host -
+Startup type is Disabled
+            Downloaded Maps Manager -
+Startup type is Disabled
+            Encrypting File System (EFS) -
+Startup type is Disabled
+            Function Discovery Provider Host -
+Startup type is Disabled
+            Function Discovery Resource Publication -
+Startup type is Disabled
+            Internet Connection Sharing (ICS) -
+Startup type is Disabled
+            Offline Files -
+Startup type is Disabled
+            Offline Files Driver -
+Startup type is Disabled
+            Payments and NFC/SE Manager -
+Startup type is Disabled
+            Secure Socket Tunneling Protocol Service -
+Startup type is Disabled
+            Sensor Monitoring Service -
+Startup type is Disabled
+            Shared PC Account Manager -
+Startup type is Disabled
+            SSDP Discovery -
+Startup type is Disabled
+            UPnP Device Host -
+Startup type is Disabled
+            Windows Media Player Network Sharing Service -
+Startup type is Disabled
+            Windows Mobile Hotspot Service -
+Startup type is Disabled
+
+        Group: Disable Scheduled Tasks
+        Group ID: DisableScheduledTasks
+            AnalyzeSystem -
+Scheduled Task already Disabled
+            BfeOnServiceStartTypeChange -
+Scheduled Task already Disabled
+            Consolidator -
+Scheduled Task already Disabled
+            CreateObjectTask -
+Scheduled Task already Disabled
+            IndexerAutomaticMaintenance -
+Scheduled Task already Disabled
+            MapsToastTask -
+Scheduled Task already Disabled
+            Microsoft Compatibility Appraiser -
+Scheduled Task already Disabled
+            Microsoft-Windows-DiskDiagnosticDataCollector -
+Scheduled Task already Disabled
+            Microsoft-Windows-DiskDiagnosticResolver -
+Scheduled Task already Disabled
+            MNO Metadata Parser -
+Scheduled Task already Disabled
+            MobilityManager -
+Scheduled Task already Disabled
+            Notifications -
+Scheduled Task already Disabled
+            ProactiveScan -
+Scheduled Task already Disabled
+            ProcessMemoryDiagnosticEvents -
+Scheduled Task already Disabled
+            ProgramDataUpdater -
+Scheduled Task already Disabled
+            Proxy -
+Scheduled Task already Disabled
+            QueueReporting -
+Scheduled Task already Disabled
+            RegIdleBackup -
+Scheduled Task already Disabled
+            ResolutionHost -
+Scheduled Task already Disabled
+            RunFullMemoryDiagnostic -
+Scheduled Task already Disabled
+            Scheduled -
+Scheduled Task already Disabled
+            ScheduledDefrag -
+Scheduled Task already Disabled
+            ServerManager -
+Scheduled Task already Disabled
+            StartComponentCleanup -
+Scheduled Task already Disabled
+            StartupAppTask -
+Scheduled Task already Disabled
+            TPM-Maintenance -
+Scheduled Task already Disabled
+            UninstallDeviceTask -
+Scheduled Task already Disabled
+            UPnPHostConfig -
+Scheduled Task already Disabled
+            UsbCeip -
+Scheduled Task already Disabled
+            VerifyWinRE -
+Scheduled Task already Disabled
+            Windows Defender Cache Maintenance -
+Scheduled Task already Disabled
+            Windows Defender Cleanup -
+Scheduled Task already Disabled
+            Windows Defender Scheduled Scan -
+Scheduled Task already Disabled
+            Windows Defender Verification -
+Scheduled Task already Disabled
+            Windows Media Sharing -
+Scheduled Task already Disabled
+            WinSAT -
+Scheduled Task already Disabled
+            Workspace Join Recovery Check -
+Scheduled Task already Disabled
+
+        Group: Miscellaneous
+        Group ID: Miscellaneous
+            DeleteUserAppContainersOnLogoff -
+Requested value 1 is configured
+            Disable background auto-layout -
+Requested value 0 is configured
+            Disable background disk defragmentation -
+Requested value N is configured
+            Disable default system screensaver -
+Requested value 0 is configured
+            Disable memory dump creation -
+Requested value 0 is configured
+            Disable NTFS last access timestamps -
+Requested value 1 is configured
+            Disable Server Manager at logon -
+Scheduled Task already Disabled
+            Hide hard error messages -
+Requested value 2 is configured
+            Increase Disk I/O Timeout to 200 seconds -
+Requested value 200 is configured
+            Windows Update -
+    This entry does not support execute mode, skipping
+
+        Group: Maintenance Tasks
+        Group ID: MaintenanceTasks
+            Clear All Event Logs -
+Clear event logs
+Clearing AMSI/Debug
+Clearing AirSpaceChannel
+Clearing Analytic
+Clearing Application
+Clearing Citrix-AppExperience-Seamless/Admin
+Clearing Citrix-AppExperience-Seamless/Operational
+Clearing Citrix-CDF-ErrorReporter/Admin
+Clearing Citrix-Device-Redirector/Admin
+Clearing Citrix-Multimedia-AudioSvc/Admin
+Clearing Citrix-Multimedia-BCR/Admin
+Clearing Citrix-Multimedia-Rave/Admin
+Clearing CtxCeip-Channel/Analytic
+wevtutil : Failed to clear log CtxCeip-Channel/Analytic.
+At line:8 char:13
++             wevtutil cl "$EventLog" 2> $null;
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to clear...annel/Analytic.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled.
+Clearing DirectShowFilterGraph
+Clearing DirectShowPluginControl
+Clearing Els_Hyphenation/Analytic
+Clearing EndpointMapper
+Clearing FSecureUltralightSDK
+Clearing FSecureUltralightSDK/Apps
+Clearing FirstUXPerf-Analytic
+Clearing ForwardedEvents
+Clearing General Logging
+Clearing HardwareEvents
+Clearing IHM_DebugChannel
+Clearing Intel-iaLPSS-GPIO/Analytic
+Clearing Intel-iaLPSS-I2C/Analytic
+Clearing Internet Explorer
+Clearing Key Management Service
+Clearing MF_MediaFoundationDeviceMFT
+Clearing MF_MediaFoundationDeviceProxy
+Clearing MF_MediaFoundationFrameServer
+Clearing MedaFoundationVideoProc
+Clearing MedaFoundationVideoProcD3D
+Clearing MediaFoundationAsyncWrapper
+Clearing MediaFoundationContentProtection
+Clearing MediaFoundationDS
+Clearing MediaFoundationDeviceProxy
+Clearing MediaFoundationMediaEngine
+Clearing MediaFoundationPerformance
+Clearing MediaFoundationPerformanceCore
+Clearing MediaFoundationPipeline
+Clearing MediaFoundationPlatform
+Clearing MediaFoundationSrcPrefetch
+Clearing Microsoft-AppV-Client-Streamingux/Debug
+Clearing Microsoft-AppV-Client/Admin
+Clearing Microsoft-AppV-Client/Debug
+Clearing Microsoft-AppV-Client/Operational
+Clearing Microsoft-AppV-Client/Virtual Applications
+Clearing Microsoft-AppV-SharedPerformance/Analytic
+Clearing Microsoft-Client-Licensing-Platform/Admin
+Clearing Microsoft-Client-Licensing-Platform/Debug
+Clearing Microsoft-Client-Licensing-Platform/Diagnostic
+Clearing Microsoft-FSLogix-Apps/Admin
+Clearing Microsoft-FSLogix-Apps/Operational
+Clearing Microsoft-FSLogix-CloudCache/Admin
+Clearing Microsoft-FSLogix-CloudCache/Operational
+Clearing Microsoft-IE/Diagnostic
+Clearing Microsoft-IEFRAME/Diagnostic
+Clearing Microsoft-JSDumpHeap/Diagnostic
+Clearing Microsoft-Management-UI/Admin
+Clearing Microsoft-Management-UI/Debug
+Clearing Microsoft-OneCore-Setup/Analytic
+Clearing Microsoft-Pef-WFP-MessageProvider/Diagnostic
+Clearing Microsoft-PerfTrack-IEFRAME/Diagnostic
+Clearing Microsoft-PerfTrack-MSHTML/Diagnostic
+Clearing Microsoft-Rdms-UI/Admin
+Clearing Microsoft-Rdms-UI/Analytic
+Clearing Microsoft-Rdms-UI/Debug
+Clearing Microsoft-Rdms-UI/Operational
+Clearing Microsoft-User Experience Virtualization-Admin/Debug
+Clearing Microsoft-User Experience Virtualization-Agent Driver/Debug
+Clearing Microsoft-User Experience Virtualization-Agent Driver/Operational
+Clearing Microsoft-User Experience Virtualization-App Agent/Analytic
+Clearing Microsoft-User Experience Virtualization-App Agent/Debug
+Clearing Microsoft-User Experience Virtualization-App Agent/Operational
+Clearing Microsoft-User Experience Virtualization-IPC/Operational
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Analytic
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Debug
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Operational
+Clearing Microsoft-Windows-AAD/Analytic
+Clearing Microsoft-Windows-AAD/Operational
+Clearing Microsoft-Windows-ADSI/Debug
+Clearing Microsoft-Windows-ASN1/Operational
+Clearing Microsoft-Windows-ATAPort/General
+Clearing Microsoft-Windows-ATAPort/SATA-LPM
+Clearing Microsoft-Windows-ActionQueue/Analytic
+Clearing Microsoft-Windows-All-User-Install-Agent/Admin
+Clearing Microsoft-Windows-AllJoyn/Debug
+Clearing Microsoft-Windows-AllJoyn/Operational
+Clearing Microsoft-Windows-AppHost/Admin
+Clearing Microsoft-Windows-AppHost/ApplicationTracing
+Clearing Microsoft-Windows-AppHost/Diagnostic
+Clearing Microsoft-Windows-AppHost/Internal
+Clearing Microsoft-Windows-AppID/Operational
+Clearing Microsoft-Windows-AppLocker/EXE and DLL
+Clearing Microsoft-Windows-AppLocker/MSI and Script
+Clearing Microsoft-Windows-AppLocker/Packaged app-Deployment
+Clearing Microsoft-Windows-AppLocker/Packaged app-Execution
+Clearing Microsoft-Windows-AppModel-Runtime/Admin
+Clearing Microsoft-Windows-AppModel-Runtime/Analytic
+Clearing Microsoft-Windows-AppModel-Runtime/Debug
+Clearing Microsoft-Windows-AppModel-Runtime/Diagnostics
+Clearing Microsoft-Windows-AppModel-State/Debug
+Clearing Microsoft-Windows-AppModel-State/Diagnostic
+Clearing Microsoft-Windows-AppReadiness/Admin
+Clearing Microsoft-Windows-AppReadiness/Debug
+Clearing Microsoft-Windows-AppReadiness/Operational
+Clearing Microsoft-Windows-AppSruProv
+Clearing Microsoft-Windows-AppXDeployment/Diagnostic
+Clearing Microsoft-Windows-AppXDeployment/Operational
+Clearing Microsoft-Windows-AppXDeploymentServer/Debug
+Clearing Microsoft-Windows-AppXDeploymentServer/Diagnostic
+Clearing Microsoft-Windows-AppXDeploymentServer/Operational
+Clearing Microsoft-Windows-AppXDeploymentServer/Restricted
+Clearing Microsoft-Windows-ApplicabilityEngine/Analytic
+Clearing Microsoft-Windows-ApplicabilityEngine/Operational
+Clearing Microsoft-Windows-Application Server-Applications/Admin
+Clearing Microsoft-Windows-Application Server-Applications/Analytic
+Clearing Microsoft-Windows-Application Server-Applications/Debug
+Clearing Microsoft-Windows-Application Server-Applications/Operational
+Clearing Microsoft-Windows-Application-Experience/Compatibility-Infrastructure-Debug
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant/Analytic
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant/Trace
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Troubleshooter
+Clearing Microsoft-Windows-Application-Experience/Program-Inventory
+Clearing Microsoft-Windows-Application-Experience/Program-Telemetry
+Clearing Microsoft-Windows-Application-Experience/Steps-Recorder
+Clearing Microsoft-Windows-AppxPackaging/Debug
+Clearing Microsoft-Windows-AppxPackaging/Operational
+Clearing Microsoft-Windows-AppxPackaging/Performance
+Clearing Microsoft-Windows-AsynchronousCausality/Causality
+Clearing Microsoft-Windows-Audio/CaptureMonitor
+Clearing Microsoft-Windows-Audio/GlitchDetection
+Clearing Microsoft-Windows-Audio/Informational
+Clearing Microsoft-Windows-Audio/Operational
+Clearing Microsoft-Windows-Audio/Performance
+Clearing Microsoft-Windows-Audio/PlaybackManager
+Clearing Microsoft-Windows-Audit/Analytic
+Clearing Microsoft-Windows-Authentication User Interface/Operational
+Clearing Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController
+Clearing Microsoft-Windows-Authentication/ProtectedUser-Client
+Clearing Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController
+Clearing Microsoft-Windows-Authentication/ProtectedUserSuccesses-DomainController
+Clearing Microsoft-Windows-AxInstallService/Log
+Clearing Microsoft-Windows-BTH-BTHPORT/HCI
+Clearing Microsoft-Windows-BTH-BTHPORT/L2CAP
+Clearing Microsoft-Windows-BTH-BTHUSB/Diagnostic
+Clearing Microsoft-Windows-BTH-BTHUSB/Performance
+Clearing Microsoft-Windows-BackgroundTaskInfrastructure/Diagnostic
+Clearing Microsoft-Windows-BackgroundTaskInfrastructure/Operational
+Clearing Microsoft-Windows-BackgroundTransfer-ContentPrefetcher/Operational
+Clearing Microsoft-Windows-Backup
+Clearing Microsoft-Windows-Base-Filtering-Engine-Connections/Operational
+Clearing Microsoft-Windows-Base-Filtering-Engine-Resource-Flows/Operational
+Clearing Microsoft-Windows-Battery/Diagnostic
+Clearing Microsoft-Windows-BestPractices/Operational
+Clearing Microsoft-Windows-Biometrics/Analytic
+Clearing Microsoft-Windows-Biometrics/Operational
+Clearing Microsoft-Windows-Bits-Client/Analytic
+Clearing Microsoft-Windows-Bits-Client/Operational
+Clearing Microsoft-Windows-Bluetooth-BthLEPrepairing/Operational
+Clearing Microsoft-Windows-Bluetooth-Bthmini/Operational
+Clearing Microsoft-Windows-Bluetooth-MTPEnum/Operational
+Clearing Microsoft-Windows-Bluetooth-Policy/Operational
+Clearing Microsoft-Windows-BranchCacheSMB/Analytic
+Clearing Microsoft-Windows-BranchCacheSMB/Operational
+Clearing Microsoft-Windows-CAPI2/Catalog Database Debug
+Clearing Microsoft-Windows-CAPI2/Operational
+Clearing Microsoft-Windows-CDROM/Operational
+Clearing Microsoft-Windows-COM/Analytic
+Clearing Microsoft-Windows-COM/ApartmentInitialize
+Clearing Microsoft-Windows-COM/ApartmentUninitialize
+Clearing Microsoft-Windows-COM/Call
+Clearing Microsoft-Windows-COM/CreateInstance
+Clearing Microsoft-Windows-COM/ExtensionCatalog
+Clearing Microsoft-Windows-COM/FreeUnusedLibrary
+Clearing Microsoft-Windows-COM/RundownInstrumentation
+Clearing Microsoft-Windows-COMRuntime/Activations
+Clearing Microsoft-Windows-COMRuntime/MessageProcessing
+Clearing Microsoft-Windows-COMRuntime/Tracing
+Clearing Microsoft-Windows-Calculator/Debug
+Clearing Microsoft-Windows-Calculator/Diagnostic
+Clearing Microsoft-Windows-CertPoleEng/Operational
+Clearing Microsoft-Windows-CertificateServices-Deployment/Operational
+Clearing Microsoft-Windows-CertificateServicesClient-CredentialRoaming/Operational
+Clearing Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational
+Clearing Microsoft-Windows-CertificateServicesClient-Lifecycle-User/Operational
+Clearing Microsoft-Windows-ClearTypeTextTuner/Diagnostic
+Clearing Microsoft-Windows-CloudStore/Debug
+Clearing Microsoft-Windows-CloudStore/Operational
+Clearing Microsoft-Windows-CmiSetup/Analytic
+Clearing Microsoft-Windows-CodeIntegrity/Operational
+Clearing Microsoft-Windows-CodeIntegrity/Verbose
+Clearing Microsoft-Windows-ComDlg32/Analytic
+Clearing Microsoft-Windows-ComDlg32/Debug
+Clearing Microsoft-Windows-Compat-Appraiser/Analytic
+Clearing Microsoft-Windows-Compat-Appraiser/Operational
+Clearing Microsoft-Windows-Containers-BindFlt/Debug
+Clearing Microsoft-Windows-Containers-BindFlt/Operational
+Clearing Microsoft-Windows-Containers-CCG/Admin
+Clearing Microsoft-Windows-Containers-Wcifs/Debug
+Clearing Microsoft-Windows-Containers-Wcifs/Operational
+Clearing Microsoft-Windows-Containers-Wcnfs/Debug
+Clearing Microsoft-Windows-Containers-Wcnfs/Operational
+Clearing Microsoft-Windows-CoreApplication/Diagnostic
+Clearing Microsoft-Windows-CoreApplication/Operational
+Clearing Microsoft-Windows-CoreApplication/Tracing
+Clearing Microsoft-Windows-CoreWindow/Analytic
+Clearing Microsoft-Windows-CoreWindow/Debug
+Clearing Microsoft-Windows-CorruptedFileRecovery-Client/Operational
+Clearing Microsoft-Windows-CorruptedFileRecovery-Server/Operational
+Clearing Microsoft-Windows-Crashdump/Operational
+Clearing Microsoft-Windows-CredUI/Diagnostic
+Clearing Microsoft-Windows-Crypto-BCRYPT/Analytic
+Clearing Microsoft-Windows-Crypto-CNG/Analytic
+Clearing Microsoft-Windows-Crypto-DPAPI/BackUpKeySvc
+Clearing Microsoft-Windows-Crypto-DPAPI/Debug
+Clearing Microsoft-Windows-Crypto-DPAPI/Operational
+Clearing Microsoft-Windows-Crypto-DSSEnh/Analytic
+Clearing Microsoft-Windows-Crypto-NCrypt/Operational
+Clearing Microsoft-Windows-Crypto-RNG/Analytic
+Clearing Microsoft-Windows-Crypto-RSAEnh/Analytic
+Clearing Microsoft-Windows-D3D10Level9/Analytic
+Clearing Microsoft-Windows-D3D10Level9/PerfTiming
+Clearing Microsoft-Windows-DAL-Provider/Analytic
+Clearing Microsoft-Windows-DAL-Provider/Operational
+Clearing Microsoft-Windows-DAMM/Diagnostic
+Clearing Microsoft-Windows-DCLocator/Debug
+Clearing Microsoft-Windows-DDisplay/Analytic
+Clearing Microsoft-Windows-DDisplay/Logging
+Clearing Microsoft-Windows-DLNA-Namespace/Analytic
+Clearing Microsoft-Windows-DNS-Client/Operational
+Clearing Microsoft-Windows-DSC/Admin
+Clearing Microsoft-Windows-DSC/Analytic
+Clearing Microsoft-Windows-DSC/Debug
+Clearing Microsoft-Windows-DSC/Operational
+Clearing Microsoft-Windows-DUI/Diagnostic
+Clearing Microsoft-Windows-DUSER/Diagnostic
+Clearing Microsoft-Windows-DXGI/Analytic
+Clearing Microsoft-Windows-DXGI/Logging
+Clearing Microsoft-Windows-DXP/Analytic
+Clearing Microsoft-Windows-Data-Pdf/Debug
+Clearing Microsoft-Windows-DataIntegrityScan/Admin
+Clearing Microsoft-Windows-DataIntegrityScan/CrashRecovery
+Clearing Microsoft-Windows-DateTimeControlPanel/Analytic
+Clearing Microsoft-Windows-DateTimeControlPanel/Debug
+Clearing Microsoft-Windows-DateTimeControlPanel/Operational
+Clearing Microsoft-Windows-Defrag-Core/Debug
+Clearing Microsoft-Windows-Deplorch/Analytic
+Clearing Microsoft-Windows-DesktopActivityModerator/Diagnostic
+Clearing Microsoft-Windows-DesktopWindowManager-Diag/Diagnostic
+Clearing Microsoft-Windows-DeviceAssociationService/Performance
+Clearing Microsoft-Windows-DeviceConfidence/Analytic
+Clearing Microsoft-Windows-DeviceGuard/Operational
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Debug
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Operational
+Clearing Microsoft-Windows-DeviceSetupManager/Admin
+Clearing Microsoft-Windows-DeviceSetupManager/Analytic
+Clearing Microsoft-Windows-DeviceSetupManager/Debug
+Clearing Microsoft-Windows-DeviceSetupManager/Operational
+Clearing Microsoft-Windows-DeviceSync/Analytic
+Clearing Microsoft-Windows-DeviceSync/Operational
+Clearing Microsoft-Windows-DeviceUpdateAgent/Operational
+Clearing Microsoft-Windows-DeviceUx/Informational
+Clearing Microsoft-Windows-DeviceUx/Performance
+Clearing Microsoft-Windows-Devices-Background/Operational
+Clearing Microsoft-Windows-Dhcp-Client/Admin
+Clearing Microsoft-Windows-Dhcp-Client/Operational
+Clearing Microsoft-Windows-Dhcpv6-Client/Admin
+Clearing Microsoft-Windows-Dhcpv6-Client/Operational
+Clearing Microsoft-Windows-DiagCpl/Debug
+Clearing Microsoft-Windows-Diagnosis-AdvancedTaskManager/Analytic
+Clearing Microsoft-Windows-Diagnosis-DPS/Analytic
+Clearing Microsoft-Windows-Diagnosis-DPS/Debug
+Clearing Microsoft-Windows-Diagnosis-DPS/Operational
+Clearing Microsoft-Windows-Diagnosis-MSDE/Debug
+Clearing Microsoft-Windows-Diagnosis-PCW/Analytic
+Clearing Microsoft-Windows-Diagnosis-PCW/Debug
+Clearing Microsoft-Windows-Diagnosis-PCW/Operational
+Clearing Microsoft-Windows-Diagnosis-PLA/Debug
+Clearing Microsoft-Windows-Diagnosis-PLA/Operational
+Clearing Microsoft-Windows-Diagnosis-Perfhost/Analytic
+Clearing Microsoft-Windows-Diagnosis-Scheduled/Operational
+Clearing Microsoft-Windows-Diagnosis-Scripted/Admin
+Clearing Microsoft-Windows-Diagnosis-Scripted/Analytic
+Clearing Microsoft-Windows-Diagnosis-Scripted/Debug
+Clearing Microsoft-Windows-Diagnosis-Scripted/Operational
+Clearing Microsoft-Windows-Diagnosis-ScriptedDiagnosticsProvider/Debug
+Clearing Microsoft-Windows-Diagnosis-ScriptedDiagnosticsProvider/Operational
+Clearing Microsoft-Windows-Diagnosis-WDC/Analytic
+Clearing Microsoft-Windows-Diagnosis-WDI/Debug
+Clearing Microsoft-Windows-Diagnostics-Networking/Debug
+Clearing Microsoft-Windows-Diagnostics-Networking/Operational
+Clearing Microsoft-Windows-Direct3D10/Analytic
+Clearing Microsoft-Windows-Direct3D10_1/Analytic
+Clearing Microsoft-Windows-Direct3D11/Analytic
+Clearing Microsoft-Windows-Direct3D11/Logging
+Clearing Microsoft-Windows-Direct3D11/PerfTiming
+Clearing Microsoft-Windows-Direct3D12/Analytic
+Clearing Microsoft-Windows-Direct3D12/Logging
+Clearing Microsoft-Windows-Direct3D12/PerfTiming
+Clearing Microsoft-Windows-Direct3D9/Analytic
+Clearing Microsoft-Windows-Direct3DShaderCache/Default
+Clearing Microsoft-Windows-DirectComposition/Diagnostic
+Clearing Microsoft-Windows-DirectManipulation/Diagnostic
+Clearing Microsoft-Windows-DirectShow-KernelSupport/Performance
+Clearing Microsoft-Windows-DirectSound/Debug
+Clearing Microsoft-Windows-DirectoryServices-Deployment/Operational
+Clearing Microsoft-Windows-Disk/Operational
+Clearing Microsoft-Windows-DiskDiagnostic/Operational
+Clearing Microsoft-Windows-DiskDiagnosticDataCollector/Operational
+Clearing Microsoft-Windows-DiskDiagnosticResolver/Operational
+Clearing Microsoft-Windows-Dism-Api/Analytic
+Clearing Microsoft-Windows-Dism-Api/ExternalAnalytic
+Clearing Microsoft-Windows-Dism-Api/InternalAnalytic
+Clearing Microsoft-Windows-Dism-Cli/Analytic
+Clearing Microsoft-Windows-DisplayColorCalibration/Debug
+Clearing Microsoft-Windows-DisplayColorCalibration/Operational
+Clearing Microsoft-Windows-DisplaySwitch/Diagnostic
+Clearing Microsoft-Windows-Documents/Performance
+Clearing Microsoft-Windows-Dot3MM/Diagnostic
+Clearing Microsoft-Windows-DriverFrameworks-UserMode/Operational
+Clearing Microsoft-Windows-Dwm-API/Diagnostic
+Clearing Microsoft-Windows-Dwm-Core/Diagnostic
+Clearing Microsoft-Windows-Dwm-Dwm/Diagnostic
+Clearing Microsoft-Windows-Dwm-Redir/Diagnostic
+Clearing Microsoft-Windows-Dwm-Udwm/Diagnostic
+Clearing Microsoft-Windows-DxgKrnl/Contention
+Clearing Microsoft-Windows-DxgKrnl/Diagnostic
+Clearing Microsoft-Windows-DxgKrnl/Performance
+Clearing Microsoft-Windows-DxgKrnl/Power
+Clearing Microsoft-Windows-DxpTaskSyncProvider/Analytic
+Clearing Microsoft-Windows-EDP-Application-Learning/Admin
+Clearing Microsoft-Windows-EDP-Audit-Regular/Admin
+Clearing Microsoft-Windows-EDP-Audit-TCB/Admin
+Clearing Microsoft-Windows-EFS/Debug
+Clearing Microsoft-Windows-ESE/IODiagnose
+Clearing Microsoft-Windows-ESE/Operational
+Clearing Microsoft-Windows-EapHost/Analytic
+Clearing Microsoft-Windows-EapHost/Debug
+Clearing Microsoft-Windows-EapHost/Operational
+Clearing Microsoft-Windows-EapMethods-RasChap/Operational
+Clearing Microsoft-Windows-EapMethods-RasTls/Operational
+Clearing Microsoft-Windows-EapMethods-Sim/Operational
+Clearing Microsoft-Windows-EapMethods-Ttls/Operational
+Clearing Microsoft-Windows-EaseOfAccess/Diagnostic
+Clearing Microsoft-Windows-EnhancedStorage-EhStorTcgDrv/Analytic
+Clearing Microsoft-Windows-EnrollmentPolicyWebService/Admin
+Clearing Microsoft-Windows-EnrollmentWebService/Admin
+Clearing Microsoft-Windows-EventCollector/Debug
+Clearing Microsoft-Windows-EventCollector/Operational
+Clearing Microsoft-Windows-EventLog-WMIProvider/Debug
+Clearing Microsoft-Windows-EventLog/Analytic
+Clearing Microsoft-Windows-EventLog/Debug
+Clearing Microsoft-Windows-FMS/Analytic
+Clearing Microsoft-Windows-FMS/Debug
+Clearing Microsoft-Windows-FMS/Operational
+Clearing Microsoft-Windows-FailoverClustering-Client/Diagnostic
+Clearing Microsoft-Windows-Fault-Tolerant-Heap/Operational
+Clearing Microsoft-Windows-FeatureConfiguration/Analytic
+Clearing Microsoft-Windows-FeatureConfiguration/Operational
+Clearing Microsoft-Windows-FederationServices-Deployment/Operational
+Clearing Microsoft-Windows-FileInfoMinifilter/Operational
+Clearing Microsoft-Windows-FileServices-ServerManager-EventProvider/Admin
+Clearing Microsoft-Windows-FileServices-ServerManager-EventProvider/Debug
+Clearing Microsoft-Windows-FileServices-ServerManager-EventProvider/Operational
+Clearing Microsoft-Windows-FileShareShadowCopyProvider/Operational
+Clearing Microsoft-Windows-Firewall-CPL/Diagnostic
+Clearing Microsoft-Windows-Folder Redirection/Operational
+Clearing Microsoft-Windows-Forwarding/Debug
+Clearing Microsoft-Windows-Forwarding/Operational
+Clearing Microsoft-Windows-GPIO-ClassExtension/Analytic
+Clearing Microsoft-Windows-GenericRoaming/Admin
+Clearing Microsoft-Windows-GroupPolicy/Operational
+Clearing Microsoft-Windows-HAL/Debug
+Clearing Microsoft-Windows-HealthCenter/Debug
+Clearing Microsoft-Windows-HealthCenter/Performance
+Clearing Microsoft-Windows-HealthCenterCPL/Performance
+Clearing Microsoft-Windows-HelloForBusiness/Operational
+Clearing Microsoft-Windows-Help/Operational
+Clearing Microsoft-Windows-HomeGroup Control Panel Performance/Diagnostic
+Clearing Microsoft-Windows-HomeGroup Control Panel/Operational
+Clearing Microsoft-Windows-HttpService/Log
+Clearing Microsoft-Windows-HttpService/Trace
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Admin
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Analytic
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Debug
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Diagnose
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Operational
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Admin
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Analytic
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Operational
+Clearing Microsoft-Windows-Hyper-V-NETVSC/Diagnostic
+Clearing Microsoft-Windows-IE-SmartScreen
+Clearing Microsoft-Windows-IKE/Operational
+Clearing Microsoft-Windows-IKEDBG/Debug
+Clearing Microsoft-Windows-IME-Broker/Analytic
+Clearing Microsoft-Windows-IME-CandidateUI/Analytic
+Clearing Microsoft-Windows-IME-CustomerFeedbackManager/Debug
+Clearing Microsoft-Windows-IME-CustomerFeedbackManagerUI/Analytic
+Clearing Microsoft-Windows-IME-JPAPI/Analytic
+Clearing Microsoft-Windows-IME-JPLMP/Analytic
+Clearing Microsoft-Windows-IME-JPPRED/Analytic
+Clearing Microsoft-Windows-IME-JPSetting/Analytic
+Clearing Microsoft-Windows-IME-JPTIP/Analytic
+Clearing Microsoft-Windows-IME-KRAPI/Analytic
+PS C:\temp\Maintenance_script> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\temp\Maintenance_script> Invoke-Command -ScriptBlock $diskcleanup
+Removing Junk files in C:\Users\ADMINM~2\AppData\Local\Temp.
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1".
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs".
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1".
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153508-1-5512-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153
+508-1-5512-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Receiver.exe-20...08-1-5512-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153508-1-5512-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Receiver.exe-20...08-1-5512-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-154221-1-11820-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-
+154221-1-11820-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfService.exe...1-1-11820-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-154221-1-11820-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfService.exe...1-1-11820-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-20220829-153509-1-11552-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-202
+20829-153509-1-11552-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfServicePlug...9-1-11552-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-20220829-153509-1-11552-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfServicePlug...9-1-11552-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153509-1-11360-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153
+509-1-11360-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (WFCRUN32.EXE-20...9-1-11360-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153509-1-11360-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (WFCRUN32.EXE-20...9-1-11360-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1: The directory is not emp
+ty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs: The directory is not empty
+.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CTXReceiverLogs:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CTXReceiverLogs:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp: T
+he process cannot access the file '26109946-6865-49f0-afbf-ecbdc5797611.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (26109946-6865-49f0-afbf-ecbdc5797611.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp: The process cannot access the file '26109946-6865-49f0-afbf-ecbdc579761
+1.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (26109946-6865-49f0-afbf-ecbdc5797611.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp: T
+he process cannot access the file '6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp: The process cannot access the file '6322b590-c2bc-4ff0-9ee7-4b2badaf2d1
+0.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp: T
+he process cannot access the file 'b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp: The process cannot access the file 'b294a6cd-5631-469d-8aa0-fb5dae6fc81
+f.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp: T
+he process cannot access the file 'bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp: The process cannot access the file 'bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7
+f.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp: T
+he process cannot access the file 'c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp: The process cannot access the file 'c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb9
+0.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log: The process cannot ac
+cess the file 'CitrixAutoUpdate.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CitrixAutoUpdate.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log: The process cannot access the file 'CitrixAutoUpdate.log' because it is being used by anoth
+er process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CitrixAutoUpdate.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (wct41E3.tmp:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (wct41E3.tmp:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM~2\AppData\Local\Temp\1:DirectoryInfo) [Remove-Item], IOExcept
+ion
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM~2\AppData\Local\Temp\1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement".
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.delete_me".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.dele
+te_me: Access to the path 'mekfm1ga.xn2.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (mekfm1ga.xn2.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.delete_me: Access to the path 'mekfm1ga.xn2.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (mekfm1ga.xn2.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.delete_me".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.dele
+te_me: Access to the path 'ujjuayxo.nqc.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (ujjuayxo.nqc.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.delete_me: Access to the path 'ujjuayxo.nqc.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (ujjuayxo.nqc.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement: The directory is
+ not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM...ckageManagement:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM...ckageManagement:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\TeamViewer".
+Emptying Recycle Bin.
+Removing Junk files in c:\Windows\Temp\*.
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1\$fs.lockfile: The process cannot
+ access the file '$fs.lockfile' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: ($fs.lockfile:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1\$fs.lockfile: The process cannot access the file '$fs.lockfile' because it is being used by another pr
+ocess.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: ($fs.lockfile:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (tmp4236-6424-1661933913-1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (tmp4236-6424-1661933913-1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\AV-malware-names-4236-6XSYSQ: The process cannot access th
+e file 'AV-malware-names-4236-6XSYSQ' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (AV-malware-names-4236-6XSYSQ:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\AV-malware-names-4236-6XSYSQ: The process cannot access the file 'AV-malware-names-4236-6XSYSQ' because it is being used by anot
+her process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (AV-malware-names-4236-6XSYSQ:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\fs-capricorn:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\fs-capricorn:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log: The process 
+cannot access the file 'C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log' because it is being u
+sed by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...15340614D8).log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log: The process cannot access the file 'C:\Windows\Temp\officeclicktorun.exe_streamser
+ver(2022082915340614D8).log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...15340614D8).log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log: The process cannot access the file '
+C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...220829-1534.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log: The process cannot access the file 'C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log' because it is being
+ used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...220829-1534.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmsvc-SYSTEM.log: The process cannot access the file 'C:\Windows
+\Temp\vmware-vmsvc-SYSTEM.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\vmware-vmsvc-SYSTEM.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmsvc-SYSTEM.log: The process cannot access the file 'C:\Windows\Temp\vmware-vmsvc-SYSTEM.log' because it is being used by another pro
+cess.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\vmware-vmsvc-SYSTEM.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmusr-adminmlubbers.log: The process cannot access the file 'C:\
+Windows\Temp\vmware-vmusr-adminmlubbers.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...minmlubbers.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmusr-adminmlubbers.log: The process cannot access the file 'C:\Windows\Temp\vmware-vmusr-adminmlubbers.log' because it is being used
+by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...minmlubbers.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+>> TerminatingError(Remove-Item): "Access is denied"
+Remove-Item : Access is denied
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Access is denied
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+Finally now , Running Windows disk Clean up Tool
+Clean Up Task Finished !!!
+PS C:\temp\Maintenance_script> Invoke-Command -ScriptBlock $diskcleanup
+Removing Junk files in C:\Users\ADMINM~2\AppData\Local\Temp.
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1".
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs".
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1".
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153508-1-5512-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153
+508-1-5512-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Receiver.exe-20...08-1-5512-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153508-1-5512-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Receiver.exe-20...08-1-5512-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-154221-1-11820-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-
+154221-1-11820-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfService.exe...1-1-11820-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-154221-1-11820-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfService.exe...1-1-11820-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-20220829-153509-1-11552-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-202
+20829-153509-1-11552-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfServicePlug...9-1-11552-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-20220829-153509-1-11552-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfServicePlug...9-1-11552-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153509-1-11360-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153
+509-1-11360-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (WFCRUN32.EXE-20...9-1-11360-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153509-1-11360-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (WFCRUN32.EXE-20...9-1-11360-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1: The directory is not emp
+ty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs: The directory is not empty
+.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CTXReceiverLogs:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CTXReceiverLogs:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp: T
+he process cannot access the file '26109946-6865-49f0-afbf-ecbdc5797611.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (26109946-6865-49f0-afbf-ecbdc5797611.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp: The process cannot access the file '26109946-6865-49f0-afbf-ecbdc579761
+1.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (26109946-6865-49f0-afbf-ecbdc5797611.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp: T
+he process cannot access the file '6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp: The process cannot access the file '6322b590-c2bc-4ff0-9ee7-4b2badaf2d1
+0.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp: T
+he process cannot access the file 'b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp: The process cannot access the file 'b294a6cd-5631-469d-8aa0-fb5dae6fc81
+f.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp: T
+he process cannot access the file 'bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp: The process cannot access the file 'bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7
+f.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp: T
+he process cannot access the file 'c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp: The process cannot access the file 'c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb9
+0.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log: The process cannot ac
+cess the file 'CitrixAutoUpdate.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CitrixAutoUpdate.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log: The process cannot access the file 'CitrixAutoUpdate.log' because it is being used by anoth
+er process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CitrixAutoUpdate.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (wct41E3.tmp:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (wct41E3.tmp:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM~2\AppData\Local\Temp\1:DirectoryInfo) [Remove-Item], IOExcept
+ion
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM~2\AppData\Local\Temp\1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement".
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.delete_me".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.dele
+te_me: Access to the path 'mekfm1ga.xn2.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (mekfm1ga.xn2.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.delete_me: Access to the path 'mekfm1ga.xn2.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (mekfm1ga.xn2.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.delete_me".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.dele
+te_me: Access to the path 'ujjuayxo.nqc.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (ujjuayxo.nqc.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.delete_me: Access to the path 'ujjuayxo.nqc.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (ujjuayxo.nqc.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement: The directory is
+ not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM...ckageManagement:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:34 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM...ckageManagement:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Emptying Recycle Bin.
+Removing Junk files in c:\Windows\Temp\*.
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1\$fs.lockfile: The process cannot
+ access the file '$fs.lockfile' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: ($fs.lockfile:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1\$fs.lockfile: The process cannot access the file '$fs.lockfile' because it is being used by another pr
+ocess.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: ($fs.lockfile:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (tmp4236-6424-1661933913-1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (tmp4236-6424-1661933913-1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\AV-malware-names-4236-6XSYSQ: The process cannot access th
+e file 'AV-malware-names-4236-6XSYSQ' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (AV-malware-names-4236-6XSYSQ:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\AV-malware-names-4236-6XSYSQ: The process cannot access the file 'AV-malware-names-4236-6XSYSQ' because it is being used by anot
+her process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (AV-malware-names-4236-6XSYSQ:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\fs-capricorn:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\fs-capricorn:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log: The process 
+cannot access the file 'C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log' because it is being u
+sed by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...15340614D8).log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log: The process cannot access the file 'C:\Windows\Temp\officeclicktorun.exe_streamser
+ver(2022082915340614D8).log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...15340614D8).log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log: The process cannot access the file '
+C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...220829-1534.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log: The process cannot access the file 'C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log' because it is being
+ used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...220829-1534.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmsvc-SYSTEM.log: The process cannot access the file 'C:\Windows
+\Temp\vmware-vmsvc-SYSTEM.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\vmware-vmsvc-SYSTEM.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmsvc-SYSTEM.log: The process cannot access the file 'C:\Windows\Temp\vmware-vmsvc-SYSTEM.log' because it is being used by another pro
+cess.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\vmware-vmsvc-SYSTEM.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmusr-adminmlubbers.log: The process cannot access the file 'C:\
+Windows\Temp\vmware-vmusr-adminmlubbers.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...minmlubbers.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmusr-adminmlubbers.log: The process cannot access the file 'C:\Windows\Temp\vmware-vmusr-adminmlubbers.log' because it is being used
+by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...minmlubbers.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+>> TerminatingError(Remove-Item): "Access is denied"
+Remove-Item : Access is denied
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Access is denied
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:42 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+Finally now , Running Windows disk Clean up Tool
+Clean Up Task Finished !!!
+PS C:\temp\Maintenance_script> Write-Host "FF wachten lul"
+FF wachten lul
+PS C:\temp\Maintenance_script> $update = {
+
+Install-PackageProvider -Name NuGet -Force
+Install-Module -Name PSWindowsUpdate -Force
+ECHO Y | Powershell Get-WindowsUpdate -AcceptAll -Download -Install -MicrosoftUpdate
+write-host "FF wachten, pizza"
+Start-Sleep -Seconds 10
+
+}
+PS C:\temp\Maintenance_script> Invoke-Command -ScriptBlock $update
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+nuget                          2.8.5.208        https://onege... NuGet provider for the OneGet meta-package manager
+FF wachten, pizza
+
+
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+nuget                          2.8.5.208        https://onege... NuGet provider for the OneGet meta-package manager
+FF wachten, pizza!
+Removing Junk files in C:\Users\ADMINM~2\AppData\Local\Temp.
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1".
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs".
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1".
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153508-1-5512-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153
+508-1-5512-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Receiver.exe-20...08-1-5512-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\Receiver.exe-20220829-153508-1-5512-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Receiver.exe-20...08-1-5512-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-154221-1-11820-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-
+154221-1-11820-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfService.exe...1-1-11820-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfService.exe-20220829-154221-1-11820-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfService.exe...1-1-11820-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-20220829-153509-1-11552-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-202
+20829-153509-1-11552-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfServicePlug...9-1-11552-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\SelfServicePlugin.exe-20220829-153509-1-11552-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (SelfServicePlug...9-1-11552-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153509-1-11360-1.etl".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153
+509-1-11360-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (WFCRUN32.EXE-20...9-1-11360-1.etl:FileInfo) [Remove-Item], ArgumentExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1\WFCRUN32.EXE-20220829-153509-1-11360-1.etl: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (WFCRUN32.EXE-20...9-1-11360-1.etl:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1: The directory is not emp
+ty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs: The directory is not empty
+.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CTXReceiverLogs:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CTXReceiverLogs: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CTXReceiverLogs:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp: T
+he process cannot access the file '26109946-6865-49f0-afbf-ecbdc5797611.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (26109946-6865-49f0-afbf-ecbdc5797611.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\26109946-6865-49f0-afbf-ecbdc5797611.tmp: The process cannot access the file '26109946-6865-49f0-afbf-ecbdc579761
+1.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (26109946-6865-49f0-afbf-ecbdc5797611.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp: T
+he process cannot access the file '6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp: The process cannot access the file '6322b590-c2bc-4ff0-9ee7-4b2badaf2d1
+0.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (6322b590-c2bc-4ff0-9ee7-4b2badaf2d10.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp: T
+he process cannot access the file 'b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp: The process cannot access the file 'b294a6cd-5631-469d-8aa0-fb5dae6fc81
+f.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (b294a6cd-5631-469d-8aa0-fb5dae6fc81f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp: T
+he process cannot access the file 'bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp: The process cannot access the file 'bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7
+f.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (bfe5ba45-f22a-40cb-bbc2-fe6caaf10c7f.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp: T
+he process cannot access the file 'c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp' because it is being used by another process
+.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp: The process cannot access the file 'c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb9
+0.tmp' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (c0ba4dfc-bcd7-46ef-b3c6-9b25a84beb90.tmp:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log: The process cannot ac
+cess the file 'CitrixAutoUpdate.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CitrixAutoUpdate.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\CitrixAutoUpdate.log: The process cannot access the file 'CitrixAutoUpdate.log' because it is being used by anoth
+er process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (CitrixAutoUpdate.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (wct41E3.tmp:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1\wct41E3.tmp: Access to the path is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (wct41E3.tmp:FileInfo) [Remove-Item], ArgumentException
+    + FullyQualifiedErrorId : RemoveFileSystemItemArgumentError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM~2\AppData\Local\Temp\1:DirectoryInfo) [Remove-Item], IOExcept
+ion
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM~2\AppData\Local\Temp\1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement".
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.delete_me".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.dele
+te_me: Access to the path 'mekfm1ga.xn2.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (mekfm1ga.xn2.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\mekfm1ga.xn2.delete_me: Access to the path 'mekfm1ga.xn2.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (mekfm1ga.xn2.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove File" on target "C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.delete_me".
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.dele
+te_me: Access to the path 'ujjuayxo.nqc.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (ujjuayxo.nqc.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessExcep
+tion
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement\ujjuayxo.nqc.delete_me: Access to the path 'ujjuayxo.nqc.delete_me' is denied.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (ujjuayxo.nqc.delete_me:FileInfo) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement: The directory is
+ not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM...ckageManagement:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Users\adminmlubbers\AppData\Local\Temp\Microsoft.PackageManagement: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:35 char:5
++     Remove-Item -Recurse  "$temp2\*" -Force -Verbose
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\ADMINM...ckageManagement:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+VERBOSE: Performing the operation "Remove Directory" on target "C:\Users\adminmlubbers\AppData\Local\Temp\TeamViewer".
+Emptying Recycle Bin.
+Removing Junk files in c:\Windows\Temp\*.
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1\$fs.lockfile: The process cannot
+ access the file '$fs.lockfile' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: ($fs.lockfile:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1\$fs.lockfile: The process cannot access the file '$fs.lockfile' because it is being used by another pr
+ocess.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: ($fs.lockfile:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (tmp4236-6424-1661933913-1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\tmp4236-6424-1661933913-1: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (tmp4236-6424-1661933913-1:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\AV-malware-names-4236-6XSYSQ: The process cannot access th
+e file 'AV-malware-names-4236-6XSYSQ' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (AV-malware-names-4236-6XSYSQ:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn\AV-malware-names-4236-6XSYSQ: The process cannot access the file 'AV-malware-names-4236-6XSYSQ' because it is being used by anot
+her process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (AV-malware-names-4236-6XSYSQ:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\fs-capricorn:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\fs-capricorn: The directory is not empty.
+
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\fs-capricorn:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log: The process 
+cannot access the file 'C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log' because it is being u
+sed by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...15340614D8).log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\officeclicktorun.exe_streamserver(2022082915340614D8).log: The process cannot access the file 'C:\Windows\Temp\officeclicktorun.exe_streamser
+ver(2022082915340614D8).log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...15340614D8).log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log: The process cannot access the file '
+C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...220829-1534.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log: The process cannot access the file 'C:\Windows\Temp\SRV-STS-RDS-000-20220829-1534.log' because it is being
+ used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...220829-1534.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmsvc-SYSTEM.log: The process cannot access the file 'C:\Windows
+\Temp\vmware-vmsvc-SYSTEM.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\vmware-vmsvc-SYSTEM.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmsvc-SYSTEM.log: The process cannot access the file 'C:\Windows\Temp\vmware-vmsvc-SYSTEM.log' because it is being used by another pro
+cess.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp\vmware-vmsvc-SYSTEM.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmusr-adminmlubbers.log: The process cannot access the file 'C:\
+Windows\Temp\vmware-vmusr-adminmlubbers.log' because it is being used by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...minmlubbers.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot remove item C:\Windows\Temp\vmware-vmusr-adminmlubbers.log: The process cannot access the file 'C:\Windows\Temp\vmware-vmusr-adminmlubbers.log' because it is being used
+by another process.
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Windows\Temp...minmlubbers.log:FileInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+>> TerminatingError(Remove-Item): "Access is denied"
+Remove-Item : Access is denied
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Access is denied
+At C:\temp\Maintenance_script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:43 char:5
++     Remove-Item -Recurse $WinTemp -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Remove-Item], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+Finally now , Running Windows disk Clean up Tool
+FF wachten, pizza!
+Clean Up Task Finished !!!
+
+Deployment Image Servicing and Management tool
+Version: 10.0.17763.1697
+
+Image Version: 10.0.17763.3287
+
+
+[===========                19.0%                          ]
+
+[===========                20.0%                          ]
+
+[===========                20.0%                          ]
+The operation completed successfully.
+------------------------------
+| Citrix Optimization Engine |
+| Version 2.7                |
+------------------------------
+
+Running in
+Execute
+ mode
+Creating Logs folder 2022-08-31_11-24-11
+Starting session log
+Checking permissions
+
+Processing definition file C:\temp\Maintenance_script\Templates\Citrix_Windows_Server_2022_2009.xml
+Adding CTXOE modules
+
+
+
+schemaversion  2.0
+version        1.1
+id             Citrix_Windows_Server_2022_2009
+displayname    Windows Server 2022 version 21H2 (2009) from Citrix
+description    OS optimizations for Windows Server 2022
+category       OS Optimizations
+author         Citrix Systems Inc.
+lastupdatedate 08/26/2021
+
+
+
+        Group: Disable Services
+        Group ID: DisableServices
+            AllJoyn Router Service -
+Startup type is Disabled
+            Application Layer Gateway Service -
+Startup type is Disabled
+            Bluetooth Audio Gateway Service -
+Startup type is Disabled
+            Bluetooth Support Service -
+Startup type is Disabled
+            Diagnostic Policy Service -
+Startup type is Disabled
+            Diagnostic Service Host -
+Startup type is Disabled
+            Diagnostic System Host -
+Startup type is Disabled
+            Downloaded Maps Manager -
+Startup type is Disabled
+            Encrypting File System (EFS) -
+Startup type is Disabled
+            Function Discovery Provider Host -
+Startup type is Disabled
+            Function Discovery Resource Publication -
+Startup type is Disabled
+            Internet Connection Sharing (ICS) -
+Startup type is Disabled
+            Offline Files -
+Startup type is Disabled
+            Offline Files Driver -
+Startup type is Disabled
+            Payments and NFC/SE Manager -
+Startup type is Disabled
+            Secure Socket Tunneling Protocol Service -
+Startup type is Disabled
+            Sensor Monitoring Service -
+Startup type is Disabled
+            Shared PC Account Manager -
+Startup type is Disabled
+            SSDP Discovery -
+Startup type is Disabled
+            UPnP Device Host -
+Startup type is Disabled
+            Windows Media Player Network Sharing Service -
+Startup type is Disabled
+            Windows Mobile Hotspot Service -
+Startup type is Disabled
+
+        Group: Disable Scheduled Tasks
+        Group ID: DisableScheduledTasks
+            AnalyzeSystem -
+Scheduled Task already Disabled
+            BfeOnServiceStartTypeChange -
+Scheduled Task already Disabled
+            Consolidator -
+Scheduled Task already Disabled
+            CreateObjectTask -
+Scheduled Task already Disabled
+            IndexerAutomaticMaintenance -
+Scheduled Task already Disabled
+            MapsToastTask -
+Scheduled Task already Disabled
+            Microsoft Compatibility Appraiser -
+Scheduled Task already Disabled
+            Microsoft-Windows-DiskDiagnosticDataCollector -
+Scheduled Task already Disabled
+            Microsoft-Windows-DiskDiagnosticResolver -
+Scheduled Task already Disabled
+            MNO Metadata Parser -
+Scheduled Task already Disabled
+            MobilityManager -
+Scheduled Task already Disabled
+            Notifications -
+Scheduled Task already Disabled
+            ProactiveScan -
+Scheduled Task already Disabled
+            ProcessMemoryDiagnosticEvents -
+Scheduled Task already Disabled
+            ProgramDataUpdater -
+Scheduled Task already Disabled
+            Proxy -
+Scheduled Task already Disabled
+            QueueReporting -
+Scheduled Task already Disabled
+            RegIdleBackup -
+Scheduled Task already Disabled
+            ResolutionHost -
+Scheduled Task already Disabled
+            RunFullMemoryDiagnostic -
+Scheduled Task already Disabled
+            Scheduled -
+Scheduled Task already Disabled
+            ScheduledDefrag -
+Scheduled Task already Disabled
+            ServerManager -
+Scheduled Task already Disabled
+            StartComponentCleanup -
+Scheduled Task already Disabled
+            StartupAppTask -
+Scheduled Task already Disabled
+            TPM-Maintenance -
+Scheduled Task already Disabled
+            UninstallDeviceTask -
+Scheduled Task already Disabled
+            UPnPHostConfig -
+Scheduled Task already Disabled
+            UsbCeip -
+Scheduled Task already Disabled
+            VerifyWinRE -
+Scheduled Task already Disabled
+            Windows Defender Cache Maintenance -
+Scheduled Task already Disabled
+            Windows Defender Cleanup -
+Scheduled Task already Disabled
+            Windows Defender Scheduled Scan -
+Scheduled Task already Disabled
+            Windows Defender Verification -
+Scheduled Task already Disabled
+            Windows Media Sharing -
+Scheduled Task already Disabled
+            WinSAT -
+Scheduled Task already Disabled
+            Workspace Join Recovery Check -
+Scheduled Task already Disabled
+
+        Group: Miscellaneous
+        Group ID: Miscellaneous
+            DeleteUserAppContainersOnLogoff -
+Requested value 1 is configured
+            Disable background auto-layout -
+Requested value 0 is configured
+            Disable background disk defragmentation -
+Requested value N is configured
+            Disable default system screensaver -
+Requested value 0 is configured
+            Disable memory dump creation -
+Requested value 0 is configured
+            Disable NTFS last access timestamps -
+Requested value 1 is configured
+            Disable Server Manager at logon -
+Scheduled Task already Disabled
+            Hide hard error messages -
+Requested value 2 is configured
+            Increase Disk I/O Timeout to 200 seconds -
+Requested value 200 is configured
+            Windows Update -
+    This entry does not support execute mode, skipping
+
+        Group: Maintenance Tasks
+        Group ID: MaintenanceTasks
+            Clear All Event Logs -
+Clear event logs
+Clearing AMSI/Debug
+Clearing AirSpaceChannel
+Clearing Analytic
+Clearing Application
+Clearing Citrix-AppExperience-Seamless/Admin
+Clearing Citrix-AppExperience-Seamless/Operational
+Clearing Citrix-CDF-ErrorReporter/Admin
+Clearing Citrix-Device-Redirector/Admin
+Clearing Citrix-Multimedia-AudioSvc/Admin
+Clearing Citrix-Multimedia-BCR/Admin
+Clearing Citrix-Multimedia-Rave/Admin
+Clearing CtxCeip-Channel/Analytic
+wevtutil : Failed to clear log CtxCeip-Channel/Analytic.
+At line:8 char:13
++             wevtutil cl "$EventLog" 2> $null;
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to clear...annel/Analytic.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled.
+Clearing DirectShowFilterGraph
+Clearing DirectShowPluginControl
+Clearing Els_Hyphenation/Analytic
+Clearing EndpointMapper
+Clearing FSecureUltralightSDK
+Clearing FSecureUltralightSDK/Apps
+Clearing FirstUXPerf-Analytic
+Clearing ForwardedEvents
+Clearing General Logging
+Clearing HardwareEvents
+Clearing IHM_DebugChannel
+Clearing Intel-iaLPSS-GPIO/Analytic
+Clearing Intel-iaLPSS-I2C/Analytic
+Clearing Internet Explorer
+Clearing Key Management Service
+Clearing MF_MediaFoundationDeviceMFT
+Clearing MF_MediaFoundationDeviceProxy
+Clearing MF_MediaFoundationFrameServer
+Clearing MedaFoundationVideoProc
+Clearing MedaFoundationVideoProcD3D
+Clearing MediaFoundationAsyncWrapper
+Clearing MediaFoundationContentProtection
+Clearing MediaFoundationDS
+Clearing MediaFoundationDeviceProxy
+Clearing MediaFoundationMediaEngine
+Clearing MediaFoundationPerformance
+Clearing MediaFoundationPerformanceCore
+Clearing MediaFoundationPipeline
+Clearing MediaFoundationPlatform
+Clearing MediaFoundationSrcPrefetch
+Clearing Microsoft-AppV-Client-Streamingux/Debug
+Clearing Microsoft-AppV-Client/Admin
+Clearing Microsoft-AppV-Client/Debug
+Clearing Microsoft-AppV-Client/Operational
+Clearing Microsoft-AppV-Client/Virtual Applications
+Clearing Microsoft-AppV-SharedPerformance/Analytic
+Clearing Microsoft-Client-Licensing-Platform/Admin
+Clearing Microsoft-Client-Licensing-Platform/Debug
+Clearing Microsoft-Client-Licensing-Platform/Diagnostic
+Clearing Microsoft-FSLogix-Apps/Admin
+Clearing Microsoft-FSLogix-Apps/Operational
+Clearing Microsoft-FSLogix-CloudCache/Admin
+Clearing Microsoft-FSLogix-CloudCache/Operational
+Clearing Microsoft-IE/Diagnostic
+Clearing Microsoft-IEFRAME/Diagnostic
+Clearing Microsoft-JSDumpHeap/Diagnostic
+Clearing Microsoft-Management-UI/Admin
+Clearing Microsoft-Management-UI/Debug
+Clearing Microsoft-OneCore-Setup/Analytic
+Clearing Microsoft-Pef-WFP-MessageProvider/Diagnostic
+Clearing Microsoft-PerfTrack-IEFRAME/Diagnostic
+Clearing Microsoft-PerfTrack-MSHTML/Diagnostic
+Clearing Microsoft-Rdms-UI/Admin
+Clearing Microsoft-Rdms-UI/Analytic
+Clearing Microsoft-Rdms-UI/Debug
+Clearing Microsoft-Rdms-UI/Operational
+Clearing Microsoft-User Experience Virtualization-Admin/Debug
+Clearing Microsoft-User Experience Virtualization-Agent Driver/Debug
+Clearing Microsoft-User Experience Virtualization-Agent Driver/Operational
+Clearing Microsoft-User Experience Virtualization-App Agent/Analytic
+Clearing Microsoft-User Experience Virtualization-App Agent/Debug
+Clearing Microsoft-User Experience Virtualization-App Agent/Operational
+Clearing Microsoft-User Experience Virtualization-IPC/Operational
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Analytic
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Debug
+Clearing Microsoft-User Experience Virtualization-SQM Uploader/Operational
+Clearing Microsoft-Windows-AAD/Analytic
+Clearing Microsoft-Windows-AAD/Operational
+Clearing Microsoft-Windows-ADSI/Debug
+Clearing Microsoft-Windows-ASN1/Operational
+Clearing Microsoft-Windows-ATAPort/General
+Clearing Microsoft-Windows-ATAPort/SATA-LPM
+Clearing Microsoft-Windows-ActionQueue/Analytic
+Clearing Microsoft-Windows-All-User-Install-Agent/Admin
+Clearing Microsoft-Windows-AllJoyn/Debug
+Clearing Microsoft-Windows-AllJoyn/Operational
+Clearing Microsoft-Windows-AppHost/Admin
+Clearing Microsoft-Windows-AppHost/ApplicationTracing
+Clearing Microsoft-Windows-AppHost/Diagnostic
+Clearing Microsoft-Windows-AppHost/Internal
+Clearing Microsoft-Windows-AppID/Operational
+Clearing Microsoft-Windows-AppLocker/EXE and DLL
+Clearing Microsoft-Windows-AppLocker/MSI and Script
+Clearing Microsoft-Windows-AppLocker/Packaged app-Deployment
+Clearing Microsoft-Windows-AppLocker/Packaged app-Execution
+Clearing Microsoft-Windows-AppModel-Runtime/Admin
+Clearing Microsoft-Windows-AppModel-Runtime/Analytic
+Clearing Microsoft-Windows-AppModel-Runtime/Debug
+Clearing Microsoft-Windows-AppModel-Runtime/Diagnostics
+Clearing Microsoft-Windows-AppModel-State/Debug
+Clearing Microsoft-Windows-AppModel-State/Diagnostic
+Clearing Microsoft-Windows-AppReadiness/Admin
+Clearing Microsoft-Windows-AppReadiness/Debug
+Clearing Microsoft-Windows-AppReadiness/Operational
+Clearing Microsoft-Windows-AppSruProv
+Clearing Microsoft-Windows-AppXDeployment/Diagnostic
+Clearing Microsoft-Windows-AppXDeployment/Operational
+Clearing Microsoft-Windows-AppXDeploymentServer/Debug
+Clearing Microsoft-Windows-AppXDeploymentServer/Diagnostic
+Clearing Microsoft-Windows-AppXDeploymentServer/Operational
+Clearing Microsoft-Windows-AppXDeploymentServer/Restricted
+Clearing Microsoft-Windows-ApplicabilityEngine/Analytic
+Clearing Microsoft-Windows-ApplicabilityEngine/Operational
+Clearing Microsoft-Windows-Application Server-Applications/Admin
+Clearing Microsoft-Windows-Application Server-Applications/Analytic
+Clearing Microsoft-Windows-Application Server-Applications/Debug
+Clearing Microsoft-Windows-Application Server-Applications/Operational
+Clearing Microsoft-Windows-Application-Experience/Compatibility-Infrastructure-Debug
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant/Analytic
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant/Trace
+Clearing Microsoft-Windows-Application-Experience/Program-Compatibility-Troubleshooter
+Clearing Microsoft-Windows-Application-Experience/Program-Inventory
+Clearing Microsoft-Windows-Application-Experience/Program-Telemetry
+Clearing Microsoft-Windows-Application-Experience/Steps-Recorder
+Clearing Microsoft-Windows-AppxPackaging/Debug
+Clearing Microsoft-Windows-AppxPackaging/Operational
+Clearing Microsoft-Windows-AppxPackaging/Performance
+Clearing Microsoft-Windows-AsynchronousCausality/Causality
+Clearing Microsoft-Windows-Audio/CaptureMonitor
+Clearing Microsoft-Windows-Audio/GlitchDetection
+Clearing Microsoft-Windows-Audio/Informational
+Clearing Microsoft-Windows-Audio/Operational
+Clearing Microsoft-Windows-Audio/Performance
+Clearing Microsoft-Windows-Audio/PlaybackManager
+Clearing Microsoft-Windows-Audit/Analytic
+Clearing Microsoft-Windows-Authentication User Interface/Operational
+Clearing Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController
+Clearing Microsoft-Windows-Authentication/ProtectedUser-Client
+Clearing Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController
+Clearing Microsoft-Windows-Authentication/ProtectedUserSuccesses-DomainController
+Clearing Microsoft-Windows-AxInstallService/Log
+Clearing Microsoft-Windows-BTH-BTHPORT/HCI
+Clearing Microsoft-Windows-BTH-BTHPORT/L2CAP
+Clearing Microsoft-Windows-BTH-BTHUSB/Diagnostic
+Clearing Microsoft-Windows-BTH-BTHUSB/Performance
+Clearing Microsoft-Windows-BackgroundTaskInfrastructure/Diagnostic
+Clearing Microsoft-Windows-BackgroundTaskInfrastructure/Operational
+Clearing Microsoft-Windows-BackgroundTransfer-ContentPrefetcher/Operational
+Clearing Microsoft-Windows-Backup
+Clearing Microsoft-Windows-Base-Filtering-Engine-Connections/Operational
+Clearing Microsoft-Windows-Base-Filtering-Engine-Resource-Flows/Operational
+Clearing Microsoft-Windows-Battery/Diagnostic
+Clearing Microsoft-Windows-BestPractices/Operational
+Clearing Microsoft-Windows-Biometrics/Analytic
+Clearing Microsoft-Windows-Biometrics/Operational
+Clearing Microsoft-Windows-Bits-Client/Analytic
+Clearing Microsoft-Windows-Bits-Client/Operational
+Clearing Microsoft-Windows-Bluetooth-BthLEPrepairing/Operational
+Clearing Microsoft-Windows-Bluetooth-Bthmini/Operational
+Clearing Microsoft-Windows-Bluetooth-MTPEnum/Operational
+Clearing Microsoft-Windows-Bluetooth-Policy/Operational
+Clearing Microsoft-Windows-BranchCacheSMB/Analytic
+Clearing Microsoft-Windows-BranchCacheSMB/Operational
+Clearing Microsoft-Windows-CAPI2/Catalog Database Debug
+Clearing Microsoft-Windows-CAPI2/Operational
+Clearing Microsoft-Windows-CDROM/Operational
+Clearing Microsoft-Windows-COM/Analytic
+Clearing Microsoft-Windows-COM/ApartmentInitialize
+Clearing Microsoft-Windows-COM/ApartmentUninitialize
+Clearing Microsoft-Windows-COM/Call
+Clearing Microsoft-Windows-COM/CreateInstance
+Clearing Microsoft-Windows-COM/ExtensionCatalog
+Clearing Microsoft-Windows-COM/FreeUnusedLibrary
+Clearing Microsoft-Windows-COM/RundownInstrumentation
+Clearing Microsoft-Windows-COMRuntime/Activations
+Clearing Microsoft-Windows-COMRuntime/MessageProcessing
+Clearing Microsoft-Windows-COMRuntime/Tracing
+Clearing Microsoft-Windows-Calculator/Debug
+Clearing Microsoft-Windows-Calculator/Diagnostic
+Clearing Microsoft-Windows-CertPoleEng/Operational
+Clearing Microsoft-Windows-CertificateServices-Deployment/Operational
+Clearing Microsoft-Windows-CertificateServicesClient-CredentialRoaming/Operational
+Clearing Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational
+Clearing Microsoft-Windows-CertificateServicesClient-Lifecycle-User/Operational
+Clearing Microsoft-Windows-ClearTypeTextTuner/Diagnostic
+Clearing Microsoft-Windows-CloudStore/Debug
+Clearing Microsoft-Windows-CloudStore/Operational
+Clearing Microsoft-Windows-CmiSetup/Analytic
+Clearing Microsoft-Windows-CodeIntegrity/Operational
+Clearing Microsoft-Windows-CodeIntegrity/Verbose
+Clearing Microsoft-Windows-ComDlg32/Analytic
+Clearing Microsoft-Windows-ComDlg32/Debug
+Clearing Microsoft-Windows-Compat-Appraiser/Analytic
+Clearing Microsoft-Windows-Compat-Appraiser/Operational
+Clearing Microsoft-Windows-Containers-BindFlt/Debug
+Clearing Microsoft-Windows-Containers-BindFlt/Operational
+Clearing Microsoft-Windows-Containers-CCG/Admin
+Clearing Microsoft-Windows-Containers-Wcifs/Debug
+Clearing Microsoft-Windows-Containers-Wcifs/Operational
+Clearing Microsoft-Windows-Containers-Wcnfs/Debug
+Clearing Microsoft-Windows-Containers-Wcnfs/Operational
+Clearing Microsoft-Windows-CoreApplication/Diagnostic
+Clearing Microsoft-Windows-CoreApplication/Operational
+Clearing Microsoft-Windows-CoreApplication/Tracing
+Clearing Microsoft-Windows-CoreWindow/Analytic
+Clearing Microsoft-Windows-CoreWindow/Debug
+Clearing Microsoft-Windows-CorruptedFileRecovery-Client/Operational
+Clearing Microsoft-Windows-CorruptedFileRecovery-Server/Operational
+Clearing Microsoft-Windows-Crashdump/Operational
+Clearing Microsoft-Windows-CredUI/Diagnostic
+Clearing Microsoft-Windows-Crypto-BCRYPT/Analytic
+Clearing Microsoft-Windows-Crypto-CNG/Analytic
+Clearing Microsoft-Windows-Crypto-DPAPI/BackUpKeySvc
+Clearing Microsoft-Windows-Crypto-DPAPI/Debug
+Clearing Microsoft-Windows-Crypto-DPAPI/Operational
+Clearing Microsoft-Windows-Crypto-DSSEnh/Analytic
+Clearing Microsoft-Windows-Crypto-NCrypt/Operational
+Clearing Microsoft-Windows-Crypto-RNG/Analytic
+Clearing Microsoft-Windows-Crypto-RSAEnh/Analytic
+Clearing Microsoft-Windows-D3D10Level9/Analytic
+Clearing Microsoft-Windows-D3D10Level9/PerfTiming
+Clearing Microsoft-Windows-DAL-Provider/Analytic
+Clearing Microsoft-Windows-DAL-Provider/Operational
+Clearing Microsoft-Windows-DAMM/Diagnostic
+Clearing Microsoft-Windows-DCLocator/Debug
+Clearing Microsoft-Windows-DDisplay/Analytic
+Clearing Microsoft-Windows-DDisplay/Logging
+Clearing Microsoft-Windows-DLNA-Namespace/Analytic
+Clearing Microsoft-Windows-DNS-Client/Operational
+Clearing Microsoft-Windows-DSC/Admin
+Clearing Microsoft-Windows-DSC/Analytic
+Clearing Microsoft-Windows-DSC/Debug
+Clearing Microsoft-Windows-DSC/Operational
+Clearing Microsoft-Windows-DUI/Diagnostic
+Clearing Microsoft-Windows-DUSER/Diagnostic
+Clearing Microsoft-Windows-DXGI/Analytic
+Clearing Microsoft-Windows-DXGI/Logging
+Clearing Microsoft-Windows-DXP/Analytic
+Clearing Microsoft-Windows-Data-Pdf/Debug
+Clearing Microsoft-Windows-DataIntegrityScan/Admin
+Clearing Microsoft-Windows-DataIntegrityScan/CrashRecovery
+Clearing Microsoft-Windows-DateTimeControlPanel/Analytic
+Clearing Microsoft-Windows-DateTimeControlPanel/Debug
+Clearing Microsoft-Windows-DateTimeControlPanel/Operational
+Clearing Microsoft-Windows-Defrag-Core/Debug
+Clearing Microsoft-Windows-Deplorch/Analytic
+Clearing Microsoft-Windows-DesktopActivityModerator/Diagnostic
+Clearing Microsoft-Windows-DesktopWindowManager-Diag/Diagnostic
+Clearing Microsoft-Windows-DeviceAssociationService/Performance
+Clearing Microsoft-Windows-DeviceConfidence/Analytic
+Clearing Microsoft-Windows-DeviceGuard/Operational
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Debug
+Clearing Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Operational
+Clearing Microsoft-Windows-DeviceSetupManager/Admin
+Clearing Microsoft-Windows-DeviceSetupManager/Analytic
+Clearing Microsoft-Windows-DeviceSetupManager/Debug
+Clearing Microsoft-Windows-DeviceSetupManager/Operational
+Clearing Microsoft-Windows-DeviceSync/Analytic
+Clearing Microsoft-Windows-DeviceSync/Operational
+Clearing Microsoft-Windows-DeviceUpdateAgent/Operational
+Clearing Microsoft-Windows-DeviceUx/Informational
+Clearing Microsoft-Windows-DeviceUx/Performance
+Clearing Microsoft-Windows-Devices-Background/Operational
+Clearing Microsoft-Windows-Dhcp-Client/Admin
+Clearing Microsoft-Windows-Dhcp-Client/Operational
+Clearing Microsoft-Windows-Dhcpv6-Client/Admin
+Clearing Microsoft-Windows-Dhcpv6-Client/Operational
+Clearing Microsoft-Windows-DiagCpl/Debug
+Clearing Microsoft-Windows-Diagnosis-AdvancedTaskManager/Analytic
+Clearing Microsoft-Windows-Diagnosis-DPS/Analytic
+Clearing Microsoft-Windows-Diagnosis-DPS/Debug
+Clearing Microsoft-Windows-Diagnosis-DPS/Operational
+Clearing Microsoft-Windows-Diagnosis-MSDE/Debug
+Clearing Microsoft-Windows-Diagnosis-PCW/Analytic
+Clearing Microsoft-Windows-Diagnosis-PCW/Debug
+Clearing Microsoft-Windows-Diagnosis-PCW/Operational
+Clearing Microsoft-Windows-Diagnosis-PLA/Debug
+Clearing Microsoft-Windows-Diagnosis-PLA/Operational
+Clearing Microsoft-Windows-Diagnosis-Perfhost/Analytic
+Clearing Microsoft-Windows-Diagnosis-Scheduled/Operational
+Clearing Microsoft-Windows-Diagnosis-Scripted/Admin
+Clearing Microsoft-Windows-Diagnosis-Scripted/Analytic
+Clearing Microsoft-Windows-Diagnosis-Scripted/Debug
+Clearing Microsoft-Windows-Diagnosis-Scripted/Operational
+Clearing Microsoft-Windows-Diagnosis-ScriptedDiagnosticsProvider/Debug
+Clearing Microsoft-Windows-Diagnosis-ScriptedDiagnosticsProvider/Operational
+Clearing Microsoft-Windows-Diagnosis-WDC/Analytic
+Clearing Microsoft-Windows-Diagnosis-WDI/Debug
+Clearing Microsoft-Windows-Diagnostics-Networking/Debug
+Clearing Microsoft-Windows-Diagnostics-Networking/Operational
+Clearing Microsoft-Windows-Direct3D10/Analytic
+Clearing Microsoft-Windows-Direct3D10_1/Analytic
+Clearing Microsoft-Windows-Direct3D11/Analytic
+Clearing Microsoft-Windows-Direct3D11/Logging
+Clearing Microsoft-Windows-Direct3D11/PerfTiming
+Clearing Microsoft-Windows-Direct3D12/Analytic
+Clearing Microsoft-Windows-Direct3D12/Logging
+Clearing Microsoft-Windows-Direct3D12/PerfTiming
+Clearing Microsoft-Windows-Direct3D9/Analytic
+Clearing Microsoft-Windows-Direct3DShaderCache/Default
+Clearing Microsoft-Windows-DirectComposition/Diagnostic
+Clearing Microsoft-Windows-DirectManipulation/Diagnostic
+Clearing Microsoft-Windows-DirectShow-KernelSupport/Performance
+Clearing Microsoft-Windows-DirectSound/Debug
+Clearing Microsoft-Windows-DirectoryServices-Deployment/Operational
+Clearing Microsoft-Windows-Disk/Operational
+Clearing Microsoft-Windows-DiskDiagnostic/Operational
+Clearing Microsoft-Windows-DiskDiagnosticDataCollector/Operational
+Clearing Microsoft-Windows-DiskDiagnosticResolver/Operational
+Clearing Microsoft-Windows-Dism-Api/Analytic
+Clearing Microsoft-Windows-Dism-Api/ExternalAnalytic
+Clearing Microsoft-Windows-Dism-Api/InternalAnalytic
+Clearing Microsoft-Windows-Dism-Cli/Analytic
+Clearing Microsoft-Windows-DisplayColorCalibration/Debug
+Clearing Microsoft-Windows-DisplayColorCalibration/Operational
+Clearing Microsoft-Windows-DisplaySwitch/Diagnostic
+Clearing Microsoft-Windows-Documents/Performance
+Clearing Microsoft-Windows-Dot3MM/Diagnostic
+Clearing Microsoft-Windows-DriverFrameworks-UserMode/Operational
+Clearing Microsoft-Windows-Dwm-API/Diagnostic
+Clearing Microsoft-Windows-Dwm-Core/Diagnostic
+Clearing Microsoft-Windows-Dwm-Dwm/Diagnostic
+Clearing Microsoft-Windows-Dwm-Redir/Diagnostic
+Clearing Microsoft-Windows-Dwm-Udwm/Diagnostic
+Clearing Microsoft-Windows-DxgKrnl/Contention
+Clearing Microsoft-Windows-DxgKrnl/Diagnostic
+Clearing Microsoft-Windows-DxgKrnl/Performance
+Clearing Microsoft-Windows-DxgKrnl/Power
+Clearing Microsoft-Windows-DxpTaskSyncProvider/Analytic
+Clearing Microsoft-Windows-EDP-Application-Learning/Admin
+Clearing Microsoft-Windows-EDP-Audit-Regular/Admin
+Clearing Microsoft-Windows-EDP-Audit-TCB/Admin
+Clearing Microsoft-Windows-EFS/Debug
+Clearing Microsoft-Windows-ESE/IODiagnose
+Clearing Microsoft-Windows-ESE/Operational
+Clearing Microsoft-Windows-EapHost/Analytic
+Clearing Microsoft-Windows-EapHost/Debug
+Clearing Microsoft-Windows-EapHost/Operational
+Clearing Microsoft-Windows-EapMethods-RasChap/Operational
+Clearing Microsoft-Windows-EapMethods-RasTls/Operational
+Clearing Microsoft-Windows-EapMethods-Sim/Operational
+Clearing Microsoft-Windows-EapMethods-Ttls/Operational
+Clearing Microsoft-Windows-EaseOfAccess/Diagnostic
+Clearing Microsoft-Windows-EnhancedStorage-EhStorTcgDrv/Analytic
+Clearing Microsoft-Windows-EnrollmentPolicyWebService/Admin
+Clearing Microsoft-Windows-EnrollmentWebService/Admin
+Clearing Microsoft-Windows-EventCollector/Debug
+Clearing Microsoft-Windows-EventCollector/Operational
+Clearing Microsoft-Windows-EventLog-WMIProvider/Debug
+Clearing Microsoft-Windows-EventLog/Analytic
+Clearing Microsoft-Windows-EventLog/Debug
+Clearing Microsoft-Windows-FMS/Analytic
+Clearing Microsoft-Windows-FMS/Debug
+Clearing Microsoft-Windows-FMS/Operational
+Clearing Microsoft-Windows-FailoverClustering-Client/Diagnostic
+Clearing Microsoft-Windows-Fault-Tolerant-Heap/Operational
+Clearing Microsoft-Windows-FeatureConfiguration/Analytic
+Clearing Microsoft-Windows-FeatureConfiguration/Operational
+Clearing Microsoft-Windows-FederationServices-Deployment/Operational
+Clearing Microsoft-Windows-FileInfoMinifilter/Operational
+Clearing Microsoft-Windows-FileServices-ServerManager-EventProvider/Admin
+Clearing Microsoft-Windows-FileServices-ServerManager-EventProvider/Debug
+Clearing Microsoft-Windows-FileServices-ServerManager-EventProvider/Operational
+Clearing Microsoft-Windows-FileShareShadowCopyProvider/Operational
+Clearing Microsoft-Windows-Firewall-CPL/Diagnostic
+Clearing Microsoft-Windows-Folder Redirection/Operational
+Clearing Microsoft-Windows-Forwarding/Debug
+Clearing Microsoft-Windows-Forwarding/Operational
+Clearing Microsoft-Windows-GPIO-ClassExtension/Analytic
+Clearing Microsoft-Windows-GenericRoaming/Admin
+Clearing Microsoft-Windows-GroupPolicy/Operational
+Clearing Microsoft-Windows-HAL/Debug
+Clearing Microsoft-Windows-HealthCenter/Debug
+Clearing Microsoft-Windows-HealthCenter/Performance
+Clearing Microsoft-Windows-HealthCenterCPL/Performance
+Clearing Microsoft-Windows-HelloForBusiness/Operational
+Clearing Microsoft-Windows-Help/Operational
+Clearing Microsoft-Windows-HomeGroup Control Panel Performance/Diagnostic
+Clearing Microsoft-Windows-HomeGroup Control Panel/Operational
+Clearing Microsoft-Windows-HttpService/Log
+Clearing Microsoft-Windows-HttpService/Trace
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Admin
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Analytic
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Debug
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Diagnose
+Clearing Microsoft-Windows-Hyper-V-Guest-Drivers/Operational
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Admin
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Analytic
+Clearing Microsoft-Windows-Hyper-V-Hypervisor-Operational
+Clearing Microsoft-Windows-Hyper-V-NETVSC/Diagnostic
+Clearing Microsoft-Windows-IE-SmartScreen
+Clearing Microsoft-Windows-IKE/Operational
+Clearing Microsoft-Windows-IKEDBG/Debug
+Clearing Microsoft-Windows-IME-Broker/Analytic
+Clearing Microsoft-Windows-IME-CandidateUI/Analytic
+Clearing Microsoft-Windows-IME-CustomerFeedbackManager/Debug
+Clearing Microsoft-Windows-IME-CustomerFeedbackManagerUI/Analytic
+Clearing Microsoft-Windows-IME-JPAPI/Analytic
+Clearing Microsoft-Windows-IME-JPLMP/Analytic
+Clearing Microsoft-Windows-IME-JPPRED/Analytic
+Clearing Microsoft-Windows-IME-JPSetting/Analytic
+Clearing Microsoft-Windows-IME-JPTIP/Analytic
+Clearing Microsoft-Windows-IME-KRAPI/Analytic
+Clearing Microsoft-Windows-IME-KRTIP/Analytic
+Clearing Microsoft-Windows-IME-OEDCompiler/Analytic
+Clearing Microsoft-Windows-IME-TCCORE/Analytic
+Clearing Microsoft-Windows-IME-TCTIP/Analytic
+Clearing Microsoft-Windows-IME-TIP/Analytic
+Clearing Microsoft-Windows-IPNAT/Diagnostic
+Clearing Microsoft-Windows-IPSEC-SRV/Diagnostic
+Clearing Microsoft-Windows-IdCtrls/Analytic
+Clearing Microsoft-Windows-IdCtrls/Operational
+Clearing Microsoft-Windows-IndirectDisplays-ClassExtension-Events/Diagnostic
+Clearing Microsoft-Windows-Input-HIDCLASS-Analytic
+Clearing Microsoft-Windows-InputSwitch/Diagnostic
+Clearing Microsoft-Windows-International-RegionalOptionsControlPanel/Operational
+Clearing Microsoft-Windows-International/Operational
+Clearing Microsoft-Windows-Iphlpsvc/Debug
+Clearing Microsoft-Windows-Iphlpsvc/Operational
+Clearing Microsoft-Windows-Iphlpsvc/Trace
+Clearing Microsoft-Windows-KdsSvc/Operational
+Clearing Microsoft-Windows-Kerberos-KdcProxy/Operational
+Clearing Microsoft-Windows-Kerberos/Operational
+Clearing Microsoft-Windows-Kernel-Acpi/Diagnostic
+Clearing Microsoft-Windows-Kernel-AppCompat/General
+Clearing Microsoft-Windows-Kernel-AppCompat/Performance
+Clearing Microsoft-Windows-Kernel-ApphelpCache/Analytic
+Clearing Microsoft-Windows-Kernel-ApphelpCache/Debug
+Clearing Microsoft-Windows-Kernel-ApphelpCache/Operational
+Clearing Microsoft-Windows-Kernel-Boot/Analytic
+Clearing Microsoft-Windows-Kernel-Boot/Operational
+Clearing Microsoft-Windows-Kernel-BootDiagnostics/Diagnostic
+Clearing Microsoft-Windows-Kernel-Disk/Analytic
+Clearing Microsoft-Windows-Kernel-EventTracing/Admin
+Clearing Microsoft-Windows-Kernel-EventTracing/Analytic
+Clearing Microsoft-Windows-Kernel-File/Analytic
+Clearing Microsoft-Windows-Kernel-IO/Operational
+Clearing Microsoft-Windows-Kernel-Interrupt-Steering/Diagnostic
+Clearing Microsoft-Windows-Kernel-IoTrace/Diagnostic
+Clearing Microsoft-Windows-Kernel-LiveDump/Analytic
+Clearing Microsoft-Windows-Kernel-Memory/Analytic
+Clearing Microsoft-Windows-Kernel-Network/Analytic
+Clearing Microsoft-Windows-Kernel-Pdc/Diagnostic
+Clearing Microsoft-Windows-Kernel-Pep/Diagnostic
+Clearing Microsoft-Windows-Kernel-PnP/Boot Diagnostic
+Clearing Microsoft-Windows-Kernel-PnP/Configuration
+Clearing Microsoft-Windows-Kernel-PnP/Configuration Diagnostic
+Clearing Microsoft-Windows-Kernel-PnP/Device Enumeration Diagnostic
+Clearing Microsoft-Windows-Kernel-PnP/Driver Diagnostic
+Clearing Microsoft-Windows-Kernel-Power/Diagnostic
+Clearing Microsoft-Windows-Kernel-Power/Thermal-Diagnostic
+Clearing Microsoft-Windows-Kernel-Power/Thermal-Operational
+Clearing Microsoft-Windows-Kernel-Prefetch/Diagnostic
+Clearing Microsoft-Windows-Kernel-Process/Analytic
+Clearing Microsoft-Windows-Kernel-Processor-Power/Diagnostic
+Clearing Microsoft-Windows-Kernel-Registry/Analytic
+Clearing Microsoft-Windows-Kernel-Registry/Performance
+Clearing Microsoft-Windows-Kernel-ShimEngine/Debug
+Clearing Microsoft-Windows-Kernel-ShimEngine/Diagnostic
+Clearing Microsoft-Windows-Kernel-ShimEngine/Operational
+Clearing Microsoft-Windows-Kernel-StoreMgr/Analytic
+Clearing Microsoft-Windows-Kernel-StoreMgr/Operational
+Clearing Microsoft-Windows-Kernel-WDI/Analytic
+Clearing Microsoft-Windows-Kernel-WDI/Debug
+Clearing Microsoft-Windows-Kernel-WDI/Operational
+Clearing Microsoft-Windows-Kernel-WHEA/Errors
+Clearing Microsoft-Windows-Kernel-WHEA/Operational
+Clearing Microsoft-Windows-Kernel-XDV/Analytic
+Clearing Microsoft-Windows-Known Folders API Service
+Clearing Microsoft-Windows-L2NA/Diagnostic
+Clearing Microsoft-Windows-LDAP-Client/Debug
+Clearing Microsoft-Windows-LSA/Diagnostic
+Clearing Microsoft-Windows-LSA/Operational
+Clearing Microsoft-Windows-LSA/Performance
+Clearing Microsoft-Windows-LUA-ConsentUI/Diagnostic
+Clearing Microsoft-Windows-LanguagePackSetup/Analytic
+Clearing Microsoft-Windows-LanguagePackSetup/Debug
+Clearing Microsoft-Windows-LanguagePackSetup/Operational
+Clearing Microsoft-Windows-LimitsManagement/Diagnostic
+Clearing Microsoft-Windows-LinkLayerDiscoveryProtocol/Diagnostic
+Clearing Microsoft-Windows-LinkLayerDiscoveryProtocol/Operational
+Clearing Microsoft-Windows-LiveId/Analytic
+wevtutil : Failed to clear log Microsoft-Windows-LiveId/Analytic.
+At line:8 char:13
++             wevtutil cl "$EventLog" 2> $null;
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to clear...iveId/Analytic.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+Access is denied.
+Clearing Microsoft-Windows-LiveId/Operational
+wevtutil : Failed to clear log Microsoft-Windows-LiveId/Operational.
+At line:8 char:13
++             wevtutil cl "$EventLog" 2> $null;
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to clear...Id/Operational.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+Access is denied.
+Clearing Microsoft-Windows-MPEG2-Video-Encoder-MFT_Analytic
+Clearing Microsoft-Windows-MPS-CLNT/Diagnostic
+Clearing Microsoft-Windows-MPS-DRV/Diagnostic
+Clearing Microsoft-Windows-MPS-SRV/Diagnostic
+Clearing Microsoft-Windows-MSFTEDIT/Diagnostic
+Clearing Microsoft-Windows-MSPaint/Admin
+Clearing Microsoft-Windows-MSPaint/Debug
+Clearing Microsoft-Windows-MSPaint/Diagnostic
+Clearing Microsoft-Windows-MUI/Admin
+Clearing Microsoft-Windows-MUI/Analytic
+Clearing Microsoft-Windows-MUI/Debug
+Clearing Microsoft-Windows-MUI/Operational
+Clearing Microsoft-Windows-ManagementTools-RegistryProvider/Analytic
+Clearing Microsoft-Windows-ManagementTools-RegistryProvider/Operational
+Clearing Microsoft-Windows-ManagementTools-TaskManagerProvider/Analytic
+Clearing Microsoft-Windows-ManagementTools-TaskManagerProvider/Debug
+Clearing Microsoft-Windows-ManagementTools-TaskManagerProvider/Operational
+Clearing Microsoft-Windows-Media-Streaming/DMC
+Clearing Microsoft-Windows-Media-Streaming/DMR
+Clearing Microsoft-Windows-Media-Streaming/MDE
+Clearing Microsoft-Windows-MediaFoundation-MFCaptureEngine/MFCaptureEngine
+Clearing Microsoft-Windows-MediaFoundation-MFReadWrite/SinkWriter
+Clearing Microsoft-Windows-MediaFoundation-MFReadWrite/SourceReader
+Clearing Microsoft-Windows-MediaFoundation-MFReadWrite/Transform
+Clearing Microsoft-Windows-MediaFoundation-Performance/SARStreamResource
+Clearing Microsoft-Windows-MediaFoundation-PlayAPI/Analytic
+Clearing Microsoft-Windows-MemoryDiagnostics-Results/Debug
+Clearing Microsoft-Windows-MiStreamProvider/Debug
+Clearing Microsoft-Windows-MiStreamProvider/Operational
+Clearing Microsoft-Windows-Minstore/Analytic
+Clearing Microsoft-Windows-Minstore/Debug
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Api-Internal/Analytic
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Api/Analytic
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Parser-Task/Analytic
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-Parser-Task/Operational
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-SmsApi/Analytic
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-SmsRouter/Admin
+Clearing Microsoft-Windows-Mobile-Broadband-Experience-SmsRouter/Analytic
+Clearing Microsoft-Windows-MobilityCenter/Performance
+Clearing Microsoft-Windows-Mprddm/Operational
+Clearing Microsoft-Windows-MsLbfoProvider/Operational
+Clearing Microsoft-Windows-NCSI/Analytic
+Clearing Microsoft-Windows-NCSI/Operational
+Clearing Microsoft-Windows-NDF-HelperClassDiscovery/Debug
+Clearing Microsoft-Windows-NDIS-PacketCapture/Diagnostic
+Clearing Microsoft-Windows-NDIS/Diagnostic
+Clearing Microsoft-Windows-NDIS/Operational
+Clearing Microsoft-Windows-NFC-Class-Extension/Analytical
+Clearing Microsoft-Windows-NTLM/Operational
+Clearing Microsoft-Windows-Narrator/Diagnostic
+Clearing Microsoft-Windows-Ncasvc/Operational
+Clearing Microsoft-Windows-NdisImPlatform/Operational
+Clearing Microsoft-Windows-NetShell/Performance
+Clearing Microsoft-Windows-Network-Connection-Broker
+Clearing Microsoft-Windows-Network-DataUsage/Analytic
+Clearing Microsoft-Windows-Network-Setup/Diagnostic
+Clearing Microsoft-Windows-Network-and-Sharing-Center/Diagnostic
+Clearing Microsoft-Windows-NetworkBridge/Diagnostic
+Clearing Microsoft-Windows-NetworkLocationWizard/Operational
+Clearing Microsoft-Windows-NetworkProfile/Diagnostic
+Clearing Microsoft-Windows-NetworkProfile/Operational
+Clearing Microsoft-Windows-NetworkProvider/Operational
+Clearing Microsoft-Windows-NetworkSecurity/Debug
+Clearing Microsoft-Windows-NetworkStatus/Analytic
+Clearing Microsoft-Windows-Networking-Correlation/Diagnostic
+Clearing Microsoft-Windows-Networking-RealTimeCommunication/Tracing
+Clearing Microsoft-Windows-NlaSvc/Diagnostic
+Clearing Microsoft-Windows-NlaSvc/Operational
+Clearing Microsoft-Windows-Ntfs/Operational
+Clearing Microsoft-Windows-Ntfs/Performance
+Clearing Microsoft-Windows-Ntfs/WHC
+Clearing Microsoft-Windows-OLE/Clipboard-Performance
+Clearing Microsoft-Windows-OLEACC/Debug
+Clearing Microsoft-Windows-OLEACC/Diagnostic
+Clearing Microsoft-Windows-OOBE-FirstLogonAnim/Diagnostic
+Clearing Microsoft-Windows-OOBE-Machine-Core/Diagnostic
+Clearing Microsoft-Windows-OOBE-Machine-DUI/Diagnostic
+Clearing Microsoft-Windows-OOBE-Machine-DUI/Operational
+Clearing Microsoft-Windows-OOBE-Machine-Plugins-Wireless/Diagnostic
+Clearing Microsoft-Windows-OfflineFiles/Analytic
+Clearing Microsoft-Windows-OfflineFiles/Debug
+Clearing Microsoft-Windows-OfflineFiles/Operational
+Clearing Microsoft-Windows-OfflineFiles/SyncLog
+Clearing Microsoft-Windows-OneX/Diagnostic
+Clearing Microsoft-Windows-OneX/Operational
+Clearing Microsoft-Windows-OobeLdr/Analytic
+Clearing Microsoft-Windows-OtpCredentialProvider/Operational
+Clearing Microsoft-Windows-PCI/Diagnostic
+Clearing Microsoft-Windows-PackageStateRoaming/Analytic
+Clearing Microsoft-Windows-PackageStateRoaming/Debug
+Clearing Microsoft-Windows-PackageStateRoaming/Operational
+Clearing Microsoft-Windows-Partition/Analytic
+Clearing Microsoft-Windows-Partition/Diagnostic
+Clearing Microsoft-Windows-PerceptionRuntime/Operational
+Clearing Microsoft-Windows-PerceptionSensorDataService/Operational
+Clearing Microsoft-Windows-PersistentMemory-Nvdimm/Analytic
+Clearing Microsoft-Windows-PersistentMemory-Nvdimm/Diagnostic
+Clearing Microsoft-Windows-PersistentMemory-Nvdimm/Operational
+Clearing Microsoft-Windows-PersistentMemory-PmemDisk/Analytic
+Clearing Microsoft-Windows-PersistentMemory-PmemDisk/Diagnostic
+Clearing Microsoft-Windows-PersistentMemory-PmemDisk/Operational
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Analytic
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Certification
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Diagnose
+Clearing Microsoft-Windows-PersistentMemory-ScmBus/Operational
+Clearing Microsoft-Windows-PhotoAcq/Analytic
+Clearing Microsoft-Windows-PlayToManager/Analytic
+Clearing Microsoft-Windows-Policy/Analytic
+Clearing Microsoft-Windows-Policy/Operational
+Clearing Microsoft-Windows-PortableDeviceStatusProvider/Analytic
+Clearing Microsoft-Windows-PortableDeviceSyncProvider/Analytic
+Clearing Microsoft-Windows-Power-Meter-Polling/Diagnostic
+Clearing Microsoft-Windows-PowerCfg/Diagnostic
+Clearing Microsoft-Windows-PowerCpl/Diagnostic
+Clearing Microsoft-Windows-PowerEfficiencyDiagnostics/Diagnostic
+Clearing Microsoft-Windows-PowerShell-DesiredStateConfiguration-FileDownloadManager/Analytic
+Clearing Microsoft-Windows-PowerShell-DesiredStateConfiguration-FileDownloadManager/Debug
+Clearing Microsoft-Windows-PowerShell-DesiredStateConfiguration-FileDownloadManager/Operational
+Clearing Microsoft-Windows-PowerShell/Admin
+Clearing Microsoft-Windows-PowerShell/Analytic
+Clearing Microsoft-Windows-PowerShell/Debug
+Clearing Microsoft-Windows-PowerShell/Operational
+Clearing Microsoft-Windows-PriResources-Deployment/Diagnostic
+Clearing Microsoft-Windows-PriResources-Deployment/Operational
+Clearing Microsoft-Windows-PrimaryNetworkIcon/Performance
+Clearing Microsoft-Windows-PrintBRM/Admin
+Clearing Microsoft-Windows-PrintService-USBMon/Debug
+Clearing Microsoft-Windows-PrintService/Admin
+Clearing Microsoft-Windows-PrintService/Debug
+Clearing Microsoft-Windows-PrintService/Operational
+Clearing Microsoft-Windows-ProcessStateManager/Diagnostic
+Clearing Microsoft-Windows-Program-Compatibility-Assistant/Analytic
+Clearing Microsoft-Windows-Program-Compatibility-Assistant/CompatAfterUpgrade
+Clearing Microsoft-Windows-Proximity-Common/Diagnostic
+Clearing Microsoft-Windows-Proximity-Common/Informational
+Clearing Microsoft-Windows-Proximity-Common/Performance
+Clearing Microsoft-Windows-PushNotification-Developer/Debug
+Clearing Microsoft-Windows-PushNotification-InProc/Debug
+Clearing Microsoft-Windows-PushNotification-Platform/Admin
+Clearing Microsoft-Windows-PushNotification-Platform/Debug
+Clearing Microsoft-Windows-PushNotification-Platform/Operational
+Clearing Microsoft-Windows-QoS-Pacer/Diagnostic
+Clearing Microsoft-Windows-QoS-qWAVE/Debug
+Clearing Microsoft-Windows-RPC-Proxy/Debug
+Clearing Microsoft-Windows-RPC/Debug
+Clearing Microsoft-Windows-RPC/EEInfo
+Clearing Microsoft-Windows-RRAS/Debug
+Clearing Microsoft-Windows-RRAS/Operational
+Clearing Microsoft-Windows-RadioManager/Analytic
+Clearing Microsoft-Windows-Ras-NdisWanPacketCapture/Diagnostic
+Clearing Microsoft-Windows-RasAgileVpn/Debug
+Clearing Microsoft-Windows-RasAgileVpn/Operational
+Clearing Microsoft-Windows-ReFS/Operational
+Clearing Microsoft-Windows-ReadyBoost/Analytic
+Clearing Microsoft-Windows-ReadyBoost/Operational
+Clearing Microsoft-Windows-Regsvr32/Operational
+Clearing Microsoft-Windows-RemoteApp and Desktop Connections/Admin
+Clearing Microsoft-Windows-RemoteApp and Desktop Connections/Operational
+Clearing Microsoft-Windows-RemoteAssistance/Admin
+Clearing Microsoft-Windows-RemoteAssistance/Operational
+Clearing Microsoft-Windows-RemoteAssistance/Tracing
+Clearing Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Admin
+Clearing Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Debug
+Clearing Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational
+Clearing Microsoft-Windows-RemoteDesktopServices-RemoteFX-Synth3dvsc/Admin
+Clearing Microsoft-Windows-RemoteDesktopServices-RemoteFX-VM-Kernel-Mode-Transport/Debug
+Clearing Microsoft-Windows-RemoteDesktopServices-RemoteFX-VM-User-Mode-Transport/Debug
+Clearing Microsoft-Windows-RemoteDesktopServices-SessionServices/Operational
+Clearing Microsoft-Windows-Remotefs-Rdbss/Diagnostic
+Clearing Microsoft-Windows-Remotefs-Rdbss/Operational
+Clearing Microsoft-Windows-ResetEng-Trace/Diagnostic
+Clearing Microsoft-Windows-Resource-Exhaustion-Detector/Operational
+Clearing Microsoft-Windows-Resource-Exhaustion-Resolver/Operational
+Clearing Microsoft-Windows-ResourcePublication/Tracing
+Clearing Microsoft-Windows-RestartManager/Operational
+Clearing Microsoft-Windows-Runtime-Graphics/Analytic
+Clearing Microsoft-Windows-Runtime-Networking-BackgroundTransfer/Tracing
+Clearing Microsoft-Windows-Runtime-Networking/Tracing
+Clearing Microsoft-Windows-Runtime-Web-Http/Tracing
+Clearing Microsoft-Windows-Runtime-WebAPI/Tracing
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTAdaptiveMediaSource
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTCaptureEngine
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTMediaStreamSource
+Clearing Microsoft-Windows-Runtime-Windows-Media/WinRTTranscode
+Clearing Microsoft-Windows-Runtime/CreateInstance
+Clearing Microsoft-Windows-Runtime/Error
+Clearing Microsoft-Windows-SENSE/Operational
+Clearing Microsoft-Windows-SMBClient/Analytic
+Clearing Microsoft-Windows-SMBClient/HelperClassDiagnostic
+Clearing Microsoft-Windows-SMBClient/ObjectStateDiagnostic
+Clearing Microsoft-Windows-SMBClient/Operational
+Clearing Microsoft-Windows-SMBDirect/Admin
+Clearing Microsoft-Windows-SMBDirect/Debug
+Clearing Microsoft-Windows-SMBDirect/Netmon
+Clearing Microsoft-Windows-SMBServer/Analytic
+Clearing Microsoft-Windows-SMBServer/Audit
+Clearing Microsoft-Windows-SMBServer/Connectivity
+Clearing Microsoft-Windows-SMBServer/Diagnostic
+Clearing Microsoft-Windows-SMBServer/Operational
+Clearing Microsoft-Windows-SMBServer/Performance
+Clearing Microsoft-Windows-SMBServer/Security
+Clearing Microsoft-Windows-SMBWitnessClient/Admin
+Clearing Microsoft-Windows-SMBWitnessClient/Informational
+Clearing Microsoft-Windows-SPB-ClassExtension/Analytic
+Clearing Microsoft-Windows-SPB-HIDI2C/Analytic
+Clearing Microsoft-Windows-Schannel-Events/Perf
+Clearing Microsoft-Windows-Sdbus/Analytic
+Clearing Microsoft-Windows-Sdbus/Debug
+Clearing Microsoft-Windows-Sdstor/Analytic
+Clearing Microsoft-Windows-Search-Core/Diagnostic
+Clearing Microsoft-Windows-Search-ProtocolHandlers/Diagnostic
+Clearing Microsoft-Windows-SearchUI/Diagnostic
+Clearing Microsoft-Windows-SearchUI/Operational
+Clearing Microsoft-Windows-Security-Adminless/Operational
+Clearing Microsoft-Windows-Security-Audit-Configuration-Client/Diagnostic
+Clearing Microsoft-Windows-Security-Audit-Configuration-Client/Operational
+Clearing Microsoft-Windows-Security-EnterpriseData-FileRevocationManager/Operational
+Clearing Microsoft-Windows-Security-ExchangeActiveSyncProvisioning/Operational
+Clearing Microsoft-Windows-Security-ExchangeActiveSyncProvisioning/Performance
+Clearing Microsoft-Windows-Security-IdentityListener/Operational
+Clearing Microsoft-Windows-Security-IdentityStore/Performance
+Clearing Microsoft-Windows-Security-LessPrivilegedAppContainer/Operational
+Clearing Microsoft-Windows-Security-Mitigations/KernelMode
+Clearing Microsoft-Windows-Security-Mitigations/UserMode
+Clearing Microsoft-Windows-Security-Netlogon/Operational
+Clearing Microsoft-Windows-Security-SPP-UX-GC/Analytic
+Clearing Microsoft-Windows-Security-SPP-UX-GenuineCenter-Logging/Operational
+Clearing Microsoft-Windows-Security-SPP-UX-Notifications/ActionCenter
+Clearing Microsoft-Windows-Security-SPP-UX/Analytic
+Clearing Microsoft-Windows-Security-SPP/Perf
+Clearing Microsoft-Windows-Security-UserConsentVerifier/Audit
+Clearing Microsoft-Windows-Security-Vault/Performance
+Clearing Microsoft-Windows-SecurityMitigationsBroker/Admin
+Clearing Microsoft-Windows-SecurityMitigationsBroker/Operational
+Clearing Microsoft-Windows-SecurityMitigationsBroker/Perf
+Clearing Microsoft-Windows-SendTo/Diagnostic
+Clearing Microsoft-Windows-Sens/Debug
+Clearing Microsoft-Windows-SenseIR/Operational
+Clearing Microsoft-Windows-Sensors/Debug
+Clearing Microsoft-Windows-Sensors/Performance
+Clearing Microsoft-Windows-Serial-ClassExtension-V2/Analytic
+Clearing Microsoft-Windows-Serial-ClassExtension/Analytic
+Clearing Microsoft-Windows-ServerManager-ConfigureSMRemoting/Debug
+Clearing Microsoft-Windows-ServerManager-ConfigureSMRemoting/Operational
+Clearing Microsoft-Windows-ServerManager-DeploymentProvider/Debug
+Clearing Microsoft-Windows-ServerManager-DeploymentProvider/Operational
+Clearing Microsoft-Windows-ServerManager-MgmtProvider/Debug
+Clearing Microsoft-Windows-ServerManager-MgmtProvider/Operational
+Clearing Microsoft-Windows-ServerManager-MultiMachine/Admin
+Clearing Microsoft-Windows-ServerManager-MultiMachine/Debug
+Clearing Microsoft-Windows-ServerManager-MultiMachine/Operational
+Clearing Microsoft-Windows-ServiceReportingApi/Debug
+Clearing Microsoft-Windows-Services-Svchost/Diagnostic
+Clearing Microsoft-Windows-Services/Diagnostic
+Clearing Microsoft-Windows-Servicing/Debug
+Clearing Microsoft-Windows-SettingSync-Azure/Debug
+Clearing Microsoft-Windows-SettingSync-Azure/Operational
+Clearing Microsoft-Windows-SettingSync-OneDrive/Analytic
+Clearing Microsoft-Windows-SettingSync-OneDrive/Debug
+Clearing Microsoft-Windows-SettingSync-OneDrive/Operational
+Clearing Microsoft-Windows-SettingSync/Analytic
+Clearing Microsoft-Windows-SettingSync/Debug
+Clearing Microsoft-Windows-SettingSync/Operational
+Clearing Microsoft-Windows-SettingSync/VerboseDebug
+Clearing Microsoft-Windows-Setup/Analytic
+Clearing Microsoft-Windows-SetupCl/Analytic
+Clearing Microsoft-Windows-SetupPlatform/Analytic
+Clearing Microsoft-Windows-SetupQueue/Analytic
+Clearing Microsoft-Windows-SetupUGC/Analytic
+Clearing Microsoft-Windows-Shell-AppWizCpl/Diagnostic
+Clearing Microsoft-Windows-Shell-AuthUI-BootAnim/Diagnostic
+Clearing Microsoft-Windows-Shell-AuthUI-Common/Diagnostic
+Clearing Microsoft-Windows-Shell-AuthUI-CredUI/Diagnostic
+Clearing Microsoft-Windows-Shell-AuthUI-CredentialProviderUser/Diagnostic
+Clearing Microsoft-Windows-Shell-AuthUI-Logon/Diagnostic
+Clearing Microsoft-Windows-Shell-AuthUI-LogonUI/Diagnostic
+Clearing Microsoft-Windows-Shell-AuthUI-Shutdown/Diagnostic
+Clearing Microsoft-Windows-Shell-ConnectedAccountState/ActionCenter
+Clearing Microsoft-Windows-Shell-Core/ActionCenter
+Clearing Microsoft-Windows-Shell-Core/AppDefaults
+Clearing Microsoft-Windows-Shell-Core/Diagnostic
+Clearing Microsoft-Windows-Shell-Core/LogonTasksChannel
+Clearing Microsoft-Windows-Shell-Core/Operational
+Clearing Microsoft-Windows-Shell-DefaultPrograms/Diagnostic
+Clearing Microsoft-Windows-Shell-LockScreenContent/Diagnostic
+Clearing Microsoft-Windows-Shell-OpenWith/Diagnostic
+Clearing Microsoft-Windows-Shell-Search-UriHandler
+Clearing Microsoft-Windows-Shell-Shwebsvc
+Clearing Microsoft-Windows-Shell-ZipFolder/Diagnostic
+Clearing Microsoft-Windows-ShellCommon-StartLayoutPopulation/Diagnostic
+Clearing Microsoft-Windows-ShellCommon-StartLayoutPopulation/Operational
+Clearing Microsoft-Windows-Shsvcs/Diagnostic
+Clearing Microsoft-Windows-SilProvider/Debug
+Clearing Microsoft-Windows-SilProvider/Operational
+Clearing Microsoft-Windows-SleepStudy/Diagnostic
+Clearing Microsoft-Windows-SmartCard-Audit/Authentication
+Clearing Microsoft-Windows-SmartCard-DeviceEnum/Operational
+Clearing Microsoft-Windows-SmartCard-TPM-VCard-Module/Admin
+Clearing Microsoft-Windows-SmartCard-TPM-VCard-Module/Operational
+Clearing Microsoft-Windows-SmartScreen/Debug
+Clearing Microsoft-Windows-SmbClient/Audit
+Clearing Microsoft-Windows-SmbClient/Connectivity
+Clearing Microsoft-Windows-SmbClient/Diagnostic
+Clearing Microsoft-Windows-SmbClient/Security
+Clearing Microsoft-Windows-Speech-UserExperience/Diagnostic
+Clearing Microsoft-Windows-Spell-Checking/Analytic
+Clearing Microsoft-Windows-SpellChecker/Analytic
+Clearing Microsoft-Windows-Spellchecking-Host/Analytic
+Clearing Microsoft-Windows-SruMon/Diagnostic
+Clearing Microsoft-Windows-StateRepository/Debug
+Clearing Microsoft-Windows-StateRepository/Diagnostic
+Clearing Microsoft-Windows-StateRepository/Operational
+Clearing Microsoft-Windows-StateRepository/Restricted
+Clearing Microsoft-Windows-StorDiag/Operational
+Clearing Microsoft-Windows-StorPort/Operational
+Clearing Microsoft-Windows-Storage-ATAPort/Admin
+Clearing Microsoft-Windows-Storage-ATAPort/Analytic
+Clearing Microsoft-Windows-Storage-ATAPort/Debug
+Clearing Microsoft-Windows-Storage-ATAPort/Diagnose
+Clearing Microsoft-Windows-Storage-ATAPort/Operational
+Clearing Microsoft-Windows-Storage-ClassPnP/Admin
+Clearing Microsoft-Windows-Storage-ClassPnP/Analytic
+Clearing Microsoft-Windows-Storage-ClassPnP/Debug
+Clearing Microsoft-Windows-Storage-ClassPnP/Diagnose
+Clearing Microsoft-Windows-Storage-ClassPnP/Operational
+Clearing Microsoft-Windows-Storage-Disk/Admin
+Clearing Microsoft-Windows-Storage-Disk/Analytic
+Clearing Microsoft-Windows-Storage-Disk/Debug
+Clearing Microsoft-Windows-Storage-Disk/Diagnose
+Clearing Microsoft-Windows-Storage-Disk/Operational
+Clearing Microsoft-Windows-Storage-Storport/Admin
+Clearing Microsoft-Windows-Storage-Storport/Analytic
+Clearing Microsoft-Windows-Storage-Storport/Debug
+Clearing Microsoft-Windows-Storage-Storport/Diagnose
+Clearing Microsoft-Windows-Storage-Storport/Health
+Clearing Microsoft-Windows-Storage-Storport/Operational
+Clearing Microsoft-Windows-Storage-Tiering-IoHeat/Heat
+Clearing Microsoft-Windows-Storage-Tiering/Admin
+Clearing Microsoft-Windows-StorageManagement-PartUtil/Operational
+Clearing Microsoft-Windows-StorageManagement/Debug
+Clearing Microsoft-Windows-StorageManagement/Operational
+Clearing Microsoft-Windows-StorageSpaces-Api/Operational
+Clearing Microsoft-Windows-StorageSpaces-Driver/Diagnostic
+Clearing Microsoft-Windows-StorageSpaces-Driver/Operational
+Clearing Microsoft-Windows-StorageSpaces-Driver/Performance
+Clearing Microsoft-Windows-StorageSpaces-ManagementAgent/WHC
+Clearing Microsoft-Windows-StorageSpaces-SpaceManager/Diagnostic
+Clearing Microsoft-Windows-StorageSpaces-SpaceManager/Operational
+Clearing Microsoft-Windows-Store/Operational
+Clearing Microsoft-Windows-Subsys-Csr/Operational
+Clearing Microsoft-Windows-Subsys-SMSS/Operational
+Clearing Microsoft-Windows-Superfetch/Main
+Clearing Microsoft-Windows-Superfetch/PfApLog
+Clearing Microsoft-Windows-Superfetch/StoreLog
+Clearing Microsoft-Windows-Sysprep/Analytic
+Clearing Microsoft-Windows-System-Profile-HardwareId/Diagnostic
+Clearing Microsoft-Windows-SystemDataArchiver/Diagnostic
+Clearing Microsoft-Windows-SystemSettingsHandlers/Debug
+Clearing Microsoft-Windows-SystemSettingsThreshold/Debug
+Clearing Microsoft-Windows-SystemSettingsThreshold/Diagnostic
+Clearing Microsoft-Windows-SystemSettingsThreshold/Operational
+Clearing Microsoft-Windows-TCPIP/Diagnostic
+Clearing Microsoft-Windows-TCPIP/Operational
+Clearing Microsoft-Windows-TSF-msctf/Debug
+Clearing Microsoft-Windows-TSF-msctf/Diagnostic
+Clearing Microsoft-Windows-TSF-msutb/Debug
+Clearing Microsoft-Windows-TSF-msutb/Diagnostic
+Clearing Microsoft-Windows-TTS/Diagnostic
+Clearing Microsoft-Windows-TWinAPI/Diagnostic
+Clearing Microsoft-Windows-TWinUI/Diagnostic
+Clearing Microsoft-Windows-TWinUI/Operational
+Clearing Microsoft-Windows-TZSync/Analytic
+Clearing Microsoft-Windows-TZSync/Operational
+Clearing Microsoft-Windows-TZUtil/Operational
+Clearing Microsoft-Windows-TaskScheduler/Debug
+Clearing Microsoft-Windows-TaskScheduler/Diagnostic
+Clearing Microsoft-Windows-TaskScheduler/Maintenance
+Clearing Microsoft-Windows-TaskScheduler/Operational
+Clearing Microsoft-Windows-TaskbarCPL/Diagnostic
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Admin
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Analytic
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Debug
+Clearing Microsoft-Windows-TerminalServices-ClientUSBDevices/Operational
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Admin
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Analytic
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Debug
+Clearing Microsoft-Windows-TerminalServices-LocalSessionManager/Operational
+Clearing Microsoft-Windows-TerminalServices-MediaRedirection/Analytic
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Admin
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Analytic
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Debug
+Clearing Microsoft-Windows-TerminalServices-PnPDevices/Operational
+Clearing Microsoft-Windows-TerminalServices-Printers/Admin
+Clearing Microsoft-Windows-TerminalServices-Printers/Analytic
+Clearing Microsoft-Windows-TerminalServices-Printers/Debug
+Clearing Microsoft-Windows-TerminalServices-Printers/Operational
+Clearing Microsoft-Windows-TerminalServices-RDPClient/Analytic
+Clearing Microsoft-Windows-TerminalServices-RDPClient/Debug
+Clearing Microsoft-Windows-TerminalServices-RDPClient/Operational
+Clearing Microsoft-Windows-TerminalServices-RdpSoundDriver/Capture
+Clearing Microsoft-Windows-TerminalServices-RdpSoundDriver/Playback
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Analytic
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Debug
+Clearing Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Admin
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Analytic
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Debug
+Clearing Microsoft-Windows-TerminalServices-ServerUSBDevices/Operational
+Clearing Microsoft-Windows-TerminalServices-SessionBroker-Client/Admin
+Clearing Microsoft-Windows-TerminalServices-SessionBroker-Client/Analytic
+Clearing Microsoft-Windows-TerminalServices-SessionBroker-Client/Debug
+Clearing Microsoft-Windows-TerminalServices-SessionBroker-Client/Operational
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Admin
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Analytic
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Debug
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSMSI/Operational
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Admin
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Analytic
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Debug
+Clearing Microsoft-Windows-TerminalServices-TSAppSrv-TSVIP/Operational
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Admin
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Analytic
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Debug
+Clearing Microsoft-Windows-TerminalServices-TSFairShare/Operational
+Clearing Microsoft-Windows-Tethering-Manager/Analytic
+Clearing Microsoft-Windows-ThemeCPL/Diagnostic
+Clearing Microsoft-Windows-ThemeUI/Diagnostic
+Clearing Microsoft-Windows-Threat-Intelligence/Analytic
+Clearing Microsoft-Windows-Time-Service-PTP-Provider/PTP-Operational
+Clearing Microsoft-Windows-Time-Service/Operational
+Clearing Microsoft-Windows-TunnelDriver
+Clearing Microsoft-Windows-UAC-FileVirtualization/Operational
+Clearing Microsoft-Windows-UAC/Operational
+Clearing Microsoft-Windows-UI-Shell/Diagnostic
+Clearing Microsoft-Windows-UIAnimation/Diagnostic
+Clearing Microsoft-Windows-UIAutomationCore/Debug
+Clearing Microsoft-Windows-UIAutomationCore/Diagnostic
+Clearing Microsoft-Windows-UIAutomationCore/Perf
+Clearing Microsoft-Windows-UIRibbon/Diagnostic
+Clearing Microsoft-Windows-USB-MAUSBHOST-Analytic
+Clearing Microsoft-Windows-USB-UCX-Analytic
+Clearing Microsoft-Windows-USB-USBHUB/Diagnostic
+Clearing Microsoft-Windows-USB-USBHUB3-Analytic
+Clearing Microsoft-Windows-USB-USBPORT/Diagnostic
+Clearing Microsoft-Windows-USB-USBXHCI-Analytic
+Clearing Microsoft-Windows-USB-USBXHCI-Trustlet-Analytic
+Clearing Microsoft-Windows-UniversalTelemetryClient/Operational
+Clearing Microsoft-Windows-Usbstor/Analytic
+Clearing Microsoft-Windows-User Control Panel Performance/Diagnostic
+Clearing Microsoft-Windows-User Control Panel Usage/Diagnostic
+Clearing Microsoft-Windows-User Control Panel/Diagnostic
+Clearing Microsoft-Windows-User Control Panel/Operational
+Clearing Microsoft-Windows-User Device Registration/Admin
+Clearing Microsoft-Windows-User Device Registration/Debug
+Clearing Microsoft-Windows-User Profile Service/Diagnostic
+Clearing Microsoft-Windows-User Profile Service/Operational
+Clearing Microsoft-Windows-User-Loader/Analytic
+Clearing Microsoft-Windows-User-Loader/Operational
+Clearing Microsoft-Windows-UserAccountControl/Diagnostic
+Clearing Microsoft-Windows-UserModePowerService/Diagnostic
+Clearing Microsoft-Windows-UserPnp/ActionCenter
+Clearing Microsoft-Windows-UserPnp/DeviceInstall
+Clearing Microsoft-Windows-UserPnp/DeviceMetadata/Debug
+Clearing Microsoft-Windows-UserPnp/Performance
+Clearing Microsoft-Windows-UserPnp/SchedulerOperations
+Clearing Microsoft-Windows-UxInit/Diagnostic
+Clearing Microsoft-Windows-UxTheme/Diagnostic
+Clearing Microsoft-Windows-VAN/Diagnostic
+Clearing Microsoft-Windows-VDRVROOT/Operational
+Clearing Microsoft-Windows-VHDMP-Analytic
+Clearing Microsoft-Windows-VHDMP-Operational
+Clearing Microsoft-Windows-VIRTDISK-Analytic
+Clearing Microsoft-Windows-VPN-Client/Operational
+Clearing Microsoft-Windows-VPN/Operational
+Clearing Microsoft-Windows-VerifyHardwareSecurity/Admin
+Clearing Microsoft-Windows-VerifyHardwareSecurity/Operational
+Clearing Microsoft-Windows-Volume/Diagnostic
+Clearing Microsoft-Windows-VolumeControl/Performance
+Clearing Microsoft-Windows-VolumeSnapshot-Driver/Analytic
+Clearing Microsoft-Windows-VolumeSnapshot-Driver/Operational
+Clearing Microsoft-Windows-WABSyncProvider/Analytic
+Clearing Microsoft-Windows-WEPHOSTSVC/Operational
+Clearing Microsoft-Windows-WER-PayloadHealth/Operational
+Clearing Microsoft-Windows-WFP/Analytic
+Clearing Microsoft-Windows-WFP/Operational
+Clearing Microsoft-Windows-WLAN-MediaManager/Diagnostic
+Clearing Microsoft-Windows-WLANConnectionFlow/Diagnostic
+Clearing Microsoft-Windows-WMI-Activity/Debug
+Clearing Microsoft-Windows-WMI-Activity/Operational
+Clearing Microsoft-Windows-WMI-Activity/Trace
+Clearing Microsoft-Windows-WMPDMCUI/Diagnostic
+Clearing Microsoft-Windows-WMPNSS-PublicAPI/Diagnostic
+Clearing Microsoft-Windows-WMPNSS-Service/Diagnostic
+Clearing Microsoft-Windows-WMPNSS-Service/Operational
+Clearing Microsoft-Windows-WMPNSSUI/Diagnostic
+Clearing Microsoft-Windows-WPD-API/Analytic
+Clearing Microsoft-Windows-WPD-ClassInstaller/Analytic
+Clearing Microsoft-Windows-WPD-ClassInstaller/Operational
+Clearing Microsoft-Windows-WPD-CompositeClassDriver/Analytic
+Clearing Microsoft-Windows-WPD-CompositeClassDriver/Operational
+Clearing Microsoft-Windows-WPD-MTPBT/Analytic
+Clearing Microsoft-Windows-WPD-MTPClassDriver/Analytic
+Clearing Microsoft-Windows-WPD-MTPClassDriver/Operational
+Clearing Microsoft-Windows-WPD-MTPIP/Analytic
+Clearing Microsoft-Windows-WPD-MTPUS/Analytic
+Clearing Microsoft-Windows-WUSA/Debug
+Clearing Microsoft-Windows-WWAN-NDISUIO-EVENTS/Diagnostic
+Clearing Microsoft-Windows-Wcmsvc/Diagnostic
+Clearing Microsoft-Windows-Wcmsvc/Operational
+Clearing Microsoft-Windows-WebAuth/Operational
+Clearing Microsoft-Windows-WebAuthN/Operational
+Clearing Microsoft-Windows-WebIO-NDF/Diagnostic
+Clearing Microsoft-Windows-WebIO/Diagnostic
+Clearing Microsoft-Windows-WebPlatStorage-Server
+Clearing Microsoft-Windows-WebServices/Tracing
+Clearing Microsoft-Windows-WebcamProvider/Analytic
+Clearing Microsoft-Windows-Websocket-Protocol-Component/Tracing
+Clearing Microsoft-Windows-Win32k/Concurrency
+Clearing Microsoft-Windows-Win32k/Contention
+Clearing Microsoft-Windows-Win32k/Messages
+Clearing Microsoft-Windows-Win32k/Operational
+Clearing Microsoft-Windows-Win32k/Power
+Clearing Microsoft-Windows-Win32k/Render
+Clearing Microsoft-Windows-Win32k/Tracing
+Clearing Microsoft-Windows-Win32k/UIPI
+Clearing Microsoft-Windows-WinHTTP-NDF/Diagnostic
+Clearing Microsoft-Windows-WinHttp/Diagnostic
+Clearing Microsoft-Windows-WinINet-Capture/Analytic
+Clearing Microsoft-Windows-WinINet-Config/ProxyConfigChanged
+Clearing Microsoft-Windows-WinINet/Analytic
+Clearing Microsoft-Windows-WinINet/UsageLog
+Clearing Microsoft-Windows-WinINet/WebSocket
+Clearing Microsoft-Windows-WinMDE/MDE
+Clearing Microsoft-Windows-WinML/Analytic
+Clearing Microsoft-Windows-WinNat/Oper
+Clearing Microsoft-Windows-WinNat/Trace
+Clearing Microsoft-Windows-WinRM/Analytic
+Clearing Microsoft-Windows-WinRM/Debug
+Clearing Microsoft-Windows-WinRM/Operational
+Clearing Microsoft-Windows-WinURLMon/Analytic
+Clearing Microsoft-Windows-Windeploy/Analytic
+Clearing Microsoft-Windows-Windows Defender/Operational
+Clearing Microsoft-Windows-Windows Defender/WHC
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/ConnectionSecurity
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/ConnectionSecurityVerbose
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/FirewallDiagnostics
+Clearing Microsoft-Windows-Windows Firewall With Advanced Security/FirewallVerbose
+Clearing Microsoft-Windows-WindowsColorSystem/Debug
+Clearing Microsoft-Windows-WindowsColorSystem/Operational
+Clearing Microsoft-Windows-WindowsSystemAssessmentTool/Operational
+Clearing Microsoft-Windows-WindowsSystemAssessmentTool/Tracing
+Clearing Microsoft-Windows-WindowsUIImmersive/Diagnostic
+Clearing Microsoft-Windows-WindowsUIImmersive/Operational
+Clearing Microsoft-Windows-WindowsUpdateClient/Analytic
+Clearing Microsoft-Windows-WindowsUpdateClient/Operational
+Clearing Microsoft-Windows-Wininit/Diagnostic
+Clearing Microsoft-Windows-Winlogon/Diagnostic
+Clearing Microsoft-Windows-Winlogon/Operational
+Clearing Microsoft-Windows-Winsock-AFD/Operational
+Clearing Microsoft-Windows-Winsock-NameResolution/Operational
+Clearing Microsoft-Windows-Winsock-WS2HELP/Operational
+Clearing Microsoft-Windows-Winsrv/Analytic
+Clearing Microsoft-Windows-Wired-AutoConfig/Diagnostic
+Clearing Microsoft-Windows-Wired-AutoConfig/Operational
+Clearing Microsoft-Windows-Wordpad/Admin
+Clearing Microsoft-Windows-Wordpad/Debug
+Clearing Microsoft-Windows-Wordpad/Diagnostic
+Clearing Microsoft-Windows-Workplace Join/Admin
+Clearing Microsoft-Windows-XAML-Diagnostics/Default
+Clearing Microsoft-Windows-XAML/Default
+Clearing Microsoft-Windows-XAudio2/Debug
+Clearing Microsoft-Windows-XAudio2/Performance
+Clearing Microsoft-Windows-glcnd/Admin
+Clearing Microsoft-Windows-glcnd/Debug
+Clearing Microsoft-Windows-glcnd/Diagnostic
+Clearing Microsoft-Windows-mobsync/Diagnostic
+Clearing Microsoft-Windows-ntshrui
+Clearing Microsoft-Windows-ntshrui-perf
+Clearing Microsoft-Windows-osk/Diagnostic
+Clearing Microsoft-Windows-stobject/Diagnostic
+Clearing Microsoft-WindowsPhone-LocationServiceProvider/Debug
+Clearing NIS-Driver-WFP/Diagnostic
+Clearing Navigator
+Clearing Network Isolation Operational
+Clearing OAlerts
+Clearing OSK_SoftKeyboard_Channel
+Clearing OfficeChannel
+Clearing OfficeDebugChannel
+Clearing OpenSSH/Admin
+Clearing OpenSSH/Debug
+Clearing OpenSSH/Operational
+Clearing Physical_Keyboard_Manager_Channel
+Clearing PlayReadyPerformanceChannel
+Clearing RTWorkQueueExtended
+Clearing RTWorkQueueTheading
+Clearing SMSApi
+Clearing Security
+Clearing Setup
+Clearing SmbWmiAnalytic
+Clearing System
+Clearing SystemEventsBroker
+Clearing TabletPC_InputPanel_Channel
+Clearing TabletPC_InputPanel_Channel/IHM
+Clearing TimeBroker
+Clearing UIManager_Channel
+Clearing Uac/Debug
+Clearing WINDOWS_KS_CHANNEL
+Clearing WINDOWS_MFH264Enc_CHANNEL
+Clearing WINDOWS_MP4SDECD_CHANNEL
+Clearing WINDOWS_MSMPEG2VDEC_CHANNEL
+Clearing WINDOWS_VC1ENC_CHANNEL
+Clearing WINDOWS_WMPHOTO_CHANNEL
+Clearing WINDOWS_wmvdecod_CHANNEL
+Clearing WMPSetup
+Clearing WMPSyncEngine
+Clearing Windows Networking Vpn Plugin Platform/Operational
+Clearing Windows Networking Vpn Plugin Platform/OperationalVerbose
+Clearing Windows PowerShell
+Clearing Windows.Globalization/Analytic
+Clearing WordChannel
+Clearing muxencode
+Successfully cleaned the event logs
+
+        Group: Optional Components
+        Group ID: OptionalComponents
+            Superfetch -
+ Entry is not marked for execution, skipping
+            Themes -
+ Entry is not marked for execution, skipping
+            Windows Error Reporting Service -
+ Entry is not marked for execution, skipping
+            Windows Search -
+ Entry is not marked for execution, skipping
+
+        Group: Rollback
+        Group ID: Rollback
+            Connected User Experiences and Telemetry -
+Startup type is Automatic
+            Optimize drives -
+Startup type is Manual
+            Shell Hardware Detection -
+Startup type is Automatic
+PS C:\temp\Maintenance_script> Invoke-Command -ScriptBlock $update
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+nuget                          2.8.5.208        https://onege... NuGet provider for the OneGet meta-package manager
+FF wachten, pizza!
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20220831112850
+**********************

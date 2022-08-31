@@ -1,0 +1,40 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20220831110938
+Username: STEENTJESICT\adminmlubbers
+RunAs User: STEENTJESICT\adminmlubbers
+Configuration Name: 
+Machine: SRV-STS-RDS-000 (Microsoft Windows NT 10.0.17763.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\temp\Maintenance script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1'
+Process ID: 5452
+PSVersion: 5.1.17763.2931
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.2931
+BuildVersion: 10.0.17763.2931
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Checking permissions
+Citrix Optimizer Tool engine has encountered a problem and will now terminate
+C:\temp\Maintenance script\CtxOptimizerEngine.ps1 : You must be administrator in order to execute this script
+At C:\temp\Maintenance script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:53 char:6
++      .\CtxOptimizerEngine.ps1 -Source Citrix_Windows_Server_2022_2009 ...
++      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,CtxOptimizerEngine.ps1
+C:\temp\Maintenance script\CtxOptimizerEngine.ps1 : You must be administrator in order to execute this script
+At C:\temp\Maintenance script\Maintenance_WinUpdate_DiskCleanup_CitrixOptimizer.ps1:53 char:6
++      .\CtxOptimizerEngine.ps1 -Source Citrix_Windows_Server_2022_2009 ...
++      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,CtxOptimizerEngine.ps1
+
+False
+PS>$global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20220831110938
+**********************
