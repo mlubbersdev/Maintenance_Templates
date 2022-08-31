@@ -14,42 +14,20 @@ Start-Sleep -Seconds 10
 
 $diskcleanup = {
 
-##################################################################################  
-# DiskCleanUp  
-##################################################################################  
- 
-## Variables ####   
-   
-    $objShell = New-Object -ComObject Shell.Application   
-    $objFolder = $objShell.Namespace(0xA)   
-      
-    $temp = get-ChildItem "env:\TEMP"   
-    $temp2 = $temp.Value   
-      
-    $WinTemp = "c:\Windows\Temp\*"   
-      
- 
-  
-# Remove temp files located in "C:\Users\USERNAME\AppData\Local\Temp"   
-    write-Host "Removing Junk files in $temp2." -ForegroundColor Magenta    
-    Remove-Item -Recurse  "$temp2\*" -Force -Verbose   
-      
-# Empty Recycle Bin # http://demonictalkingskull.com/2010/06/empty-users-recycle-bin-with-powershell-and-gpo/   
-    write-Host "Emptying Recycle Bin." -ForegroundColor Cyan    
-    $objFolder.items() | %{ remove-item $_.path -Recurse -Confirm:$false}   
-      
-# Remove Windows Temp Directory    
-    write-Host "Removing Junk files in $WinTemp." -ForegroundColor Green   
-    Remove-Item -Recurse $WinTemp -Force    
-      
-#6# Running Disk Clean up Tool    
-    write-Host "Finally now , Running Windows disk Clean up Tool" -ForegroundColor Cyan   
-    cleanmgr /sagerun:1 | out-Null
-    Write-Host "FF wachten, pizza!"
-    Start-Sleep -Seconds 10        
-    
-    write-Host "Clean Up Task Finished !!!"
-##### End of the Script ##### ad  
+Write-Host 'Clearing CleanMgr.exe automation settings.'
+Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\*' -Name StateFlags0001 -ErrorAction SilentlyContinue | Remove-ItemProperty -Name StateFlags0001 -ErrorAction SilentlyContinue
+
+Write-Host 'Enabling Update Cleanup. This is done automatically in Windows 10 via a scheduled task.'
+New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Update Cleanup' -Name StateFlags0001 -Value 2 -PropertyType DWord
+
+Write-Host 'Enabling Temporary Files Cleanup.'
+New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files' -Name StateFlags0001 -Value 2 -PropertyType DWord
+
+Write-Host 'Starting CleanMgr.exe...'
+Start-Process -FilePath CleanMgr.exe -ArgumentList '/sagerun:1' -WindowStyle Hidden -Wait
+
+Write-Host 'Waiting for CleanMgr and DismHost processes. Second wait neccesary as CleanMgr.exe spins off separate processes.'
+Get-Process -Name cleanmgr,dismhost -ErrorAction SilentlyContinue | Wait-Process
 }
 
 $Citrixoptimizer = {
