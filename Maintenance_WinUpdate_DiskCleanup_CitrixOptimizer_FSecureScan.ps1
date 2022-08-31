@@ -74,7 +74,7 @@ if (Test-Path -Path $folder) {
 else {
 
     Start-MpScan -ScanType FullScan
-
+    }
 }
 
 Invoke-Command -ScriptBlock $update
