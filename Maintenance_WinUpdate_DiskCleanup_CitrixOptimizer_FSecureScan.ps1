@@ -1,6 +1,10 @@
 ﻿Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
 cd $PSScriptRoot
 $Computername = hostname
+Add-Type -AssemblyName System.Windows.Forms
+$browser = New-Object System.Windows.Forms.FolderBrowserDialog
+$null = $browser.ShowDialog()
+$path = $browser.SelectedPath
 
 $update = {
 
@@ -61,4 +65,5 @@ Invoke-Command -ScriptBlock $update
 Invoke-Command -ScriptBlock $componentstorecleanup
 Invoke-Command -ScriptBlock $Citrixoptimizer
 Invoke-Command -ScriptBlock $FSecure
-Out-File -FilePath \\fileserver\Websky\Maintenance_script_Output\$computername'_'$(get-date -Format yyyy_mm_dd).txt
+##Wegschrijven van 
+#Out-File -FilePath \\$path\$computername'_'$(get-date -Format yyyy_mm_dd).txt
