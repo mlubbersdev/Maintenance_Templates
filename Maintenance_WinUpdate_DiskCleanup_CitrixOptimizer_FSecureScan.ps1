@@ -56,7 +56,8 @@ else {
 }
 
 Invoke-Command -ScriptBlock $update
-Invoke-Command -ScriptBlock $diskcleanup
+##Disk cleanup script werkt nog niet goed, maar meeste waarvoor we dit doen wordt in de componentstorecleanup opgepakt##
+#Invoke-Command -ScriptBlock $diskcleanup 
 Invoke-Command -ScriptBlock $componentstorecleanup
 Invoke-Command -ScriptBlock $Citrixoptimizer
 Invoke-Command -ScriptBlock $FSecure
