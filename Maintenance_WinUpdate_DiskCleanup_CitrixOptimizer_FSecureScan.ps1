@@ -66,8 +66,14 @@ $componenstorecleanup = {
 
 $FSecure = {
 
+$folder = 'C:\Program Files (x86)\F-Secure\'
+if (Test-Path -Path $folder) {
+
     cd 'C:\Program Files (x86)\F-Secure\psb\'
-    .\fsscan.exe -d C:\
+    .\fsscan.exe -d C:\}
+else {
+
+    Start-MpScan -ScanType FullScan
 
 }
 
